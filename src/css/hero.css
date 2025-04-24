@@ -50,6 +50,22 @@
     display: none;
   }
 }
+.hero--lower-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 72px;
+  gap: 72px;
+
+  @media screen and (width >= 768px) and (width <=1280px) {
+    margin-bottom: 104px;
+  }
+
+  @media screen and (width >= 1280px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .hero--icon {
   align-items: center;
   margin-right: 8px;
@@ -62,7 +78,6 @@
   background: none;
   border: none;
   transition: all 300ms ease-in-out;
-
   &::after {
     position: absolute;
     left: 151px;
@@ -89,6 +104,12 @@
       height: 96px;
     }
   }
+  @media screen and (width >= 1280px) {
+    padding-right: 167px;
+    &::after {
+      top: 0;
+    }
+  }
 }
 .hero--link {
   font-family: 'Poppins', sans-serif;
@@ -104,5 +125,63 @@
   @media screen and (width >= 768px) {
     font-size: 20px;
     line-height: 1.6;
+  }
+}
+.hero--text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  width: 320px;
+  line-height: 1.55556;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+
+  @media screen and (width >= 768px) {
+    font-size: 20px;
+    line-height: 1.6;
+    width: 704px;
+  }
+  @media screen and (width >= 1280px) {
+    width: 597px;
+  }
+}
+
+.hero--links-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  width: auto;
+  background-color: var(
+    --light-grey
+  ); /* on dark theme --charcoal-dt: #2a2d32;*/
+  @media screen and (width >= 768px) {
+    padding: 40px 0;
+  }
+}
+.hero--links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  @media screen and (width >= 768px) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+.hero--socials-links {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--black);
+
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    color: var(--accet-green);
   }
 }
