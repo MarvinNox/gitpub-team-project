@@ -1,12 +1,108 @@
+.container {
+  min-width: 320px;
+  max-width: 360px;
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.hero.section {
+  padding-top: 88px;
+}
+
 .hero--title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
-  font-size: 136px;
-  line-height: 1.14706;
-  letter-spacing: 0.01em;
+  font-size: 64px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
   text-transform: uppercase;
   color: var(--black);
+  transition: all 200ms ease-in-out;
+  @media screen and (width >= 768px) {
+    font-size: 136px;
+    line-height: 1.14706;
+    letter-spacing: 0.01em;
+  }
+  @media screen and (width >= 1280px) {
+    width: 600px;
+  }
 }
+
 .hero--title-sub {
   color: var(--accet-green);
+}
+.hero--wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  @media screen and (width >= 1280px) {
+    justify-content: space-between;
+  }
+}
+.hero--wrapper > img {
+  @media screen and (width <= 1280px) {
+    justify-content: space-between;
+    display: none;
+  }
+}
+.hero--icon {
+  align-items: center;
+  margin-right: 8px;
+  transition: all 300ms ease-in-out;
+}
+.hero--btn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: none;
+  border: none;
+  transition: all 300ms ease-in-out;
+
+  &::after {
+    position: absolute;
+    left: 151px;
+    top: -32px;
+    content: '';
+    display: block;
+    border-radius: 16px;
+    width: 165px;
+    height: 92px;
+    background: var(--light-accent);
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+  }
+  &:hover::after {
+    background: var(--accet-green);
+  }
+  &:hover .hero--icon {
+    animation: btn-swipe 1000ms ease-in infinite;
+  }
+
+  @media screen and (width >= 768px) {
+    &::after {
+      width: 261px;
+      height: 96px;
+    }
+  }
+}
+.hero--link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 1.55556;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: all 200ms ease-in-out;
+
+  @media screen and (width >= 768px) {
+    font-size: 20px;
+    line-height: 1.6;
+  }
 }

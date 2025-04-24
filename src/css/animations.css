@@ -1,0 +1,10 @@
+@keyframes btn-swipe {
+  0%,
+  100% {
+    translate: 0;
+  }
+  50% {
+    translate: 6px;
+    scale: 1.02;
+  }
+}
