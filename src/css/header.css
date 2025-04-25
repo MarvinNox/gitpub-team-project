@@ -51,7 +51,7 @@ nav {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--black);
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   transition: all 300ms ease-in-out;
   padding: 20px 0px;
 
@@ -82,7 +82,7 @@ nav {
 }
 
 .header--nav--list-link {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
