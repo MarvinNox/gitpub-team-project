@@ -44,7 +44,7 @@ body.dark {
 } */
 
 .hero > .container {
-  min-width: 320px;
+  /* min-width: 320px; */
   max-width: 360px;
   /* padding: 0 20px; */
 
@@ -162,11 +162,22 @@ body.dark {
   &:hover .hero--link {
     translate: 98px;
     color: var(--white);
+
+    @media screen and (width < 360px) {
+      translate: 78px;
+    }
+
     @media screen and (width >= 768px) {
-      translate: 140px;
+      translate: 120px;
     }
   }
 
+  @media screen and (width < 360px) {
+    &::after {
+      left: 101px;
+      width: 156px;
+    }
+  }
   @media screen and (width >= 768px) {
     &::after {
       width: 261px;
@@ -195,6 +206,10 @@ body.dark {
 
   transition: all 300ms linear;
 
+  @media screen and (width < 360px) {
+    font-size: 12px;
+  }
+
   @media screen and (width >= 768px) {
     font-size: 20px;
     line-height: 1.6;
@@ -205,7 +220,7 @@ body.dark {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  width: 320px;
+  max-width: 320px;
   line-height: 1.55556;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -214,11 +229,11 @@ body.dark {
   @media screen and (width >= 768px) {
     font-size: 20px;
     line-height: 1.6;
-    width: 704px;
+    max-width: 704px;
   }
 
   @media screen and (width >= 1280px) {
-    width: 597px;
+    max-width: 597px;
   }
 }
 
