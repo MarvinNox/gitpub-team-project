@@ -1,3 +1,20 @@
+.header {
+  background-color: var(--white);
+  &.dark {
+    background-color: var(--black-dt);
+    .header--logo {
+      color: var(--white);
+    }
+    .header--nav--list-link {
+      color: var(--white);
+    }
+    .header--burger-icon {
+      fill: var(--white);
+      stroke: var(--white);
+    }
+  }
+}
+
 .header > .container {
   display: flex;
   align-items: center;
