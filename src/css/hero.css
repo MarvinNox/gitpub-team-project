@@ -39,21 +39,21 @@ body.dark {
   z-index: 1;
 }
 
-/* .hero.section {
+.hero.section {
   padding: 0;
-} */
+}
 
 .hero > .container {
-  /* min-width: 320px; */
+  box-sizing: border-box;
   max-width: 360px;
-  /* padding: 0 20px; */
+  padding: 0 20px;
 
   padding-top: 112px;
   position: relative;
 
   @media screen and (width >= 768px) {
     max-width: 768px;
-    /* padding: 0 32px; */
+    padding: 0 32px;
     padding-top: 88px;
   }
 
