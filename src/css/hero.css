@@ -32,11 +32,13 @@ body.dark {
     }
   }
 }
+
 .hero {
   position: relative;
   background-color: var(--white);
   z-index: 1;
 }
+
 .hero.section {
   padding: 0;
 }
@@ -44,13 +46,18 @@ body.dark {
 .container {
   min-width: 320px;
   max-width: 360px;
+  padding: 0 20px;
+
   @media only screen and (min-width: 768px) {
     max-width: 768px;
+    padding: 0 32px;
   }
+
   @media only screen and (min-width: 1280px) {
     max-width: 1280px;
   }
 }
+
 .hero > .container {
   padding-top: 112px;
   position: relative;
@@ -69,11 +76,13 @@ body.dark {
   text-transform: uppercase;
   color: var(--black);
   transition: all 200ms ease-in-out;
+
   @media screen and (width >= 768px) {
     font-size: 136px;
     line-height: 1.14706;
     letter-spacing: 0.01em;
   }
+
   @media screen and (width >= 1280px) {
     width: 600px;
   }
@@ -86,6 +95,7 @@ body.dark {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+
   @media screen and (width >= 1280px) {
     justify-content: space-between;
   }
@@ -138,12 +148,15 @@ body.dark {
     z-index: -1;
     transition: all 200ms ease-in-out;
   }
+
   &:hover::after {
     background: var(--accet-green);
   }
+
   &:hover .hero--icon {
     animation: btn-swipe 1200ms linear infinite;
   }
+
   &:hover .hero--link {
     translate: 118px;
     color: var(--white);
@@ -158,6 +171,7 @@ body.dark {
       height: 96px;
     }
   }
+
   @media screen and (width >= 1280px) {
     padding-right: 167px;
     margin-left: 72px;
@@ -166,6 +180,7 @@ body.dark {
     }
   }
 }
+
 .hero--link {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -183,6 +198,7 @@ body.dark {
     line-height: 1.6;
   }
 }
+
 .hero--text {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -198,6 +214,7 @@ body.dark {
     line-height: 1.6;
     width: 704px;
   }
+
   @media screen and (width >= 1280px) {
     width: 597px;
   }
@@ -209,9 +226,8 @@ body.dark {
   justify-content: center;
   padding: 32px 0;
   width: auto;
-  background-color: var(
-    --light-grey
-  ); /* on dark theme --charcoal-dt: #2a2d32;*/
+  background-color: var(--light-grey);
+
   @media screen and (width >= 768px) {
     padding: 40px 0;
   }
@@ -222,11 +238,13 @@ body.dark {
   flex-direction: column;
   gap: 24px;
   align-items: center;
+
   @media screen and (width >= 768px) {
     flex-direction: row;
     gap: 40px;
   }
 }
+
 .hero--socials-links {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
