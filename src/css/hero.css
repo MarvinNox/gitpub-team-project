@@ -39,30 +39,26 @@ body.dark {
   z-index: 1;
 }
 
-.hero.section {
+/* .hero.section {
   padding: 0;
-}
-
-.container {
-  min-width: 320px;
-  max-width: 360px;
-  padding: 0 20px;
-
-  @media only screen and (min-width: 768px) {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
-  @media only screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
-}
+} */
 
 .hero > .container {
+  min-width: 320px;
+  max-width: 360px;
+  /* padding: 0 20px; */
+
   padding-top: 112px;
   position: relative;
+
   @media screen and (width >= 768px) {
+    max-width: 768px;
+    /* padding: 0 32px; */
     padding-top: 88px;
+  }
+
+  @media only screen and (width >= 1280px) {
+    max-width: 1280px;
   }
 }
 
@@ -143,7 +139,7 @@ body.dark {
 
   &::after {
     position: absolute;
-    left: 151px;
+    left: 131px;
     top: -32px;
     content: '';
     display: block;
@@ -164,7 +160,7 @@ body.dark {
   }
 
   &:hover .hero--link {
-    translate: 118px;
+    translate: 98px;
     color: var(--white);
     @media screen and (width >= 768px) {
       translate: 140px;
