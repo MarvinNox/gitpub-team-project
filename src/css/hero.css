@@ -63,7 +63,7 @@ body.dark {
 }
 
 .hero--title {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 64px;
   line-height: 1.25;
@@ -196,7 +196,7 @@ body.dark {
 }
 
 .hero--link {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
 
@@ -218,7 +218,7 @@ body.dark {
 }
 
 .hero--text {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   max-width: 320px;
@@ -264,7 +264,7 @@ body.dark {
 }
 
 .hero--socials-links {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
 
