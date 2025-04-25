@@ -28,5 +28,4 @@ export function toggleSwitcher(evt) {
     }
 }
 detectTheme();
-console.log(refs.themeToggler);
 refs.themeToggler.addEventListener('change', toggleSwitcher);
