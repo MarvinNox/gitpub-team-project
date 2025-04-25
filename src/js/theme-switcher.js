@@ -27,5 +27,6 @@ export function toggleSwitcher(evt) {
         document.body.classList.remove('dark');
     }
 }
-detectTheme();
-refs.themeToggler.addEventListener('change', toggleSwitcher);
+//! to main
+// detectTheme();
+// refs.themeToggler.addEventListener('change', toggleSwitcher);
