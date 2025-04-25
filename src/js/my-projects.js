@@ -115,7 +115,7 @@ function createGallery(projects) {
 
 
 
-async function loadNextProjects(shouldScroll = true) {
+ export async function loadNextProjects(shouldScroll = true) {
   loadMoreBtn.disabled = true;
   loadMoreBtn.classList.add('disabled');
 
@@ -146,7 +146,7 @@ async function loadNextProjects(shouldScroll = true) {
 }
 
 // Загрузка первых 3-х проектов при старте страницы (без скролла)
-loadNextProjects(false);
+
 
 // Обработчик кнопки "LOAD MORE" — включает скролл
 loadMoreBtn.addEventListener('click', () => loadNextProjects(true));
