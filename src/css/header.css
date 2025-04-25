@@ -106,12 +106,17 @@
   left: 2px;
   top: 2px;
   background-color: var(--accet-green);
+
   border-radius: 50%;
   transition: transform 0.3s;
 }
 
 .header--toggle input:checked + .header--slider::before {
   transform: translateX(24px);
+  background-color: transparent;
+  background-image: url('/img/moon.svg');
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .header--toggle input:checked + .header--slider {
   background-color: var(--black);
