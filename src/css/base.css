@@ -42,17 +42,16 @@ body {
   padding: 0;
 }
 
-.section,
-.header,
-.footer {
-  padding: 0 20px;
-}
+
 
 
 
 .container {
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 360px;
+  padding: 0 20px;
 }
 
 
@@ -62,11 +61,10 @@ body {
       margin-bottom: 124px;
     }
 
-  .section,
-  .header,
-  .footer {
+    .container {
+      max-width: 768px;
       padding: 0 32px;
-  }
+    }
 
 }
 
@@ -76,5 +74,9 @@ body {
   .section {
       margin-bottom: 164px;
     }
+
+  .container {
+    max-width: 1280px;
+  }
 }
 
