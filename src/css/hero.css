@@ -8,10 +8,30 @@
     max-width: 1280px;
   }
 }
-
-.hero.section {
-  padding-top: 88px;
+.hero > .container {
+  padding-top: 112px;
+  position: relative;
+  @media screen and (width >= 768px) {
+    padding-top: 88px;
+  }
 }
+
+/* .hero > .container {
+  padding-top: 112px;
+
+  background-image: url('/img/hero/decor_bg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (width >= 768px) {
+    background-image: url('/img/hero/decor_bg-tablet.svg');
+    padding-top: 88px;
+  }
+
+  @media screen and (width >= 1280px) {
+    background-image: url('/img/hero/decor_bg-desk.svg');
+  }
+} */
 
 .hero--title {
   font-family: 'Impact', sans-serif;
@@ -184,4 +204,11 @@
   &:hover {
     color: var(--accet-green);
   }
+}
+
+.hero--bg {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  z-index: -2;
 }
