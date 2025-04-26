@@ -21,11 +21,11 @@ form.addEventListener('submit', evt => {
   serverRequest(query);
 });
 
-const serverRequest = async query => {
+export const serverRequest = async query => {
   const url = 'https://portfolio-js.b.goit.study/api/requests';
   try {
     const serverResponse = await axios.post(url, query);
-    // showPopUp(serverResponse.data.title, serverResponse.data.message);
+    showModal(serverResponse.data.title, serverResponse.data.message);
     console.log(serverResponse);
     form.reset();
   } catch (error) {
@@ -38,17 +38,17 @@ const serverRequest = async query => {
   }
 };
 
-// const showPopUp = (title, message) => {
-//   document.getElementById('modal').classList.toggle('is-open');
-//   document.getElementById('work-together-popup-title').innerText = `${title}`;
-//   document.getElementById(
-//     'work-together-popup-paragraph'
-//   ).innerText = `${message}`;
-//   const closeModalBtn = document.getElementById(
-//     'work-together-popup-close-icon'
-//   );
-//     closeModalBtn.addEventListener('click', toggleModal);
-//     toggleModal(){
-//         document.getElementById("modal").classList.remove('is-open');
-//     }
-// };
+const showModal = (title, message) => {
+  document.getElementById('work-together-modal').classList.toggle('is-open');
+  document.getElementById('work-together-modal-caption').innerText = `${title}`;
+  document.getElementById(
+    'work-together-modal-paragraph'
+  ).innerText = `${message}`;
+  const closeModalBtn = document.getElementById(
+    'work-together-modal-close-button'
+  );
+  closeModalBtn.addEventListener('click', closeModal);
+  function closeModal() {
+    document.getElementById('work-together-modal').classList.remove('is-open');
+  }
+};
