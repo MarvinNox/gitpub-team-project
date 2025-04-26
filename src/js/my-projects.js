@@ -6,71 +6,61 @@ const allProjects = [
         src1x: 'my-projects/rectangle-11-1x.webp',  
         src2x: 'my-projects/rectangle-11-2x.webp',
         src: '/my-projects/rectangle-11-1x.webp',
-        alt: "Wallet webservice ",
-        h3: "Wallet webservice "
+        alt: "Wallet webservice "
     },
     {
         src1x: 'my-projects/rectangle-9-1x.webp',  
         src2x: 'my-projects/rectangle-9-2x.webp',
         src: 'my-projects/rectangle-9-1x.webp',
-        alt: "Green harvest webservice",
-        h3: "Green harvest webservice"
+        alt: "Green harvest webservice"
     },
     {
         src1x: 'my-projects/rectangle-12-1x.webp',  
         src2x: 'my-projects/rectangle-12-2x.webp',
         src: 'my-projects/rectangle-12-1x.webp',
-        alt: "English Exellence website",
-        h3: "English Exellence website"
+        alt: "English Exellence website"
     },
     {
         src1x: '/my-projects/rectangle-10-1x.webp',  
         src2x: '/my-projects/rectangle-10-2x.webp',
         src: '/my-projects/rectangle-10-1x.webp',
-        alt: "power pulse webservice",
-        h3: "power pulse webservice"
+        alt: "power pulse webservice"
     },
     {
         src1x: '/my-projects/rectangle-7-1x.webp',
         src2x: '/my-projects/rectangle-7-2x.webp',
         src: '/my-projects/rectangle-7-1x.webp',
-        alt: "mimino website",
-        h3: "mimino website"
+        alt: "mimino website"
     },
     {
         src1x: '/my-projects/rectangle-8-1x.webp',
         src2x: '/my-projects/rectangle-8-2x.webp',
         src: '/my-projects/rectangle-8-1x.webp',
-        alt: "vyshyvanka vibes Landing Page",
-        h3: "vyshyvanka vibes Landing Page"
+        alt: "vyshyvanka vibes Landing Page"
     },
     {
         src1x: '/my-projects/rectangle-6-1x.webp',
         src2x: '/my-projects/rectangle-6-2x.webp',
         src: '/my-projects/rectangle-6-1x.webp',
-        alt: "chego jewelry website",
-        h3: "chego jewelry website"
+        alt: "chego jewelry website"
     },
     {
         src1x: '/my-projects/rectangle-4-1x.webp',
         src2x: '/my-projects/rectangle-4-2x.webp',
         src: '/my-projects/rectangle-4-1x.webp',
-        alt: "energy flow webservice",
-        h3: "energy flow webservice"
+        alt: "energy flow webservice"
     },
     {
         src1x: '/my-projects/rectangle-5-1x.webp',
         src2x: '/my-projects/rectangle-5-2x.webp',
         src: '/my-projects/rectangle-5-1x.webp',
-        alt: "fruitbox online store",
-        h3: "fruitbox online store"
+        alt: "fruitbox online store"
     },
     {
         src1x: '/my-projects/first-screen-1-1x.webp',
         src2x: '/my-projects/first-screen-1-2x.webp',
         src: '/my-projects/first-screen-1-1x.webp',
-        alt: "starlight studio landing page",
-        h3: "starlight studio landing page"
+        alt: "starlight studio landing page"
     }
 ];
 
@@ -95,7 +85,7 @@ function createGallery(projects) {
         </a>
         <div class="div-my-project">
           <p class="text-my-project">React, JavaScript, Node JS, Git</p>
-          <h3 class="names-my-project">${h3}</h3>
+          <h3 class="names-my-project">${alt}</h3>
           <a href="https://github.com/Marakasss/gitpub-team-project" target="_blank">
             <button class="button-my-project">
               <span class="visit-my-project">VISIT</span>
@@ -149,6 +139,6 @@ function createGallery(projects) {
 
 
 // Обработчик кнопки "LOAD MORE" — включает скролл
-loadMoreBtn.addEventListener('click', () => loadNextProjects(true));
+loadMoreBtn.addEventListener('click',loadNextProjects);
 
 
