@@ -1,7 +1,41 @@
+body {
+    &.dark {
+        .section {
+            background-color: var(--black-dt);
+        }
+        .hedline-my-projects{
+            color: #F0F0F0;
+        }
+        .hedline-span-my-project{
+            color: #14C57C;
+
+        }
+        .text-my-project{
+            color: #F0F0F0;
+        }
+        .names-my-project{
+            color: #F0F0F0;
+        }
+        .visit-my-project{
+            color: #F0F0F0;
+
+        }
+        .button-my-project{
+           color: #2A2D32;
+        }
+        .button-my-project:hover{
+            background: #3B3F45;
+        }
+    }
+}
+
+
+
 /* Заголовок проекта */
 .hedline-my-projects {
     min-width: 291px;
     min-height: 64px;
+    color: #292929;
     font-family: Impact;
     font-weight: 400;
     font-size: 52px;
@@ -103,6 +137,7 @@
 .text-my-project {
     width: 251px;
     height: 24px;
+    color: #292929;
     font-family: Poppins;
     font-weight: 300;
     font-size: 16px;
@@ -127,6 +162,7 @@
 .names-my-project {
     width: 320px;
     height: 80px;
+    color:  #292929;
     font-family: Poppins;
     font-weight: 500;
     font-size: 32px;
@@ -181,6 +217,7 @@
     line-height: 24px;
     letter-spacing: 0.5px;
     vertical-align: middle;
+    color:  #292929;
 }
 
 /* Кнопка "Load more" */
@@ -227,3 +264,5 @@
 .disabled {
     opacity: 0.5;
 }
+
+
