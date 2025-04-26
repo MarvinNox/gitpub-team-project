@@ -21,9 +21,9 @@ const allProjects = [
         alt: "English Exellence website"
     },
     {
-        src1x: './my-projects/rectangle-10-1x.jpg',  
-        src2x: './my-projects/rectangle-10-2x.jpg',
-        src: './my-projects/rectangle-10-1x.jpg',
+        src1x: '/my-projects/rectangle-10-1x.jpg',  
+        src2x: '/my-projects/rectangle-10-2x.jpg',
+        src: '/my-projects/rectangle-10-1x.jpg',
         alt: "power pulse webservice"
     },
     {
@@ -140,3 +140,5 @@ function createGallery(projects) {
 
 // Обработчик кнопки "LOAD MORE" — включает скролл
 loadMoreBtn.addEventListener('click',loadNextProjects);
+
+
