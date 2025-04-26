@@ -16,19 +16,22 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 32px 0px;
+    padding: 32px 0;
     height: 104px;
     background: var(--light-accent);
     white-space: nowrap;
+    position: relative;
+
+    &:hover .skills {
+            animation-play-state: paused;
+        }
 }
-
-
 
 .skills {
     display: inline-flex;
     gap: 56px;
     white-space: nowrap;
-    animation: marquee 2s linear infinite;
+    animation: marquee 25s linear infinite;
 }
 
 .skills span {
@@ -42,6 +45,10 @@
     color: var(--black);
     white-space: nowrap;
 
+    &:hover {
+        cursor: pointer;
+        color: var(--accet-green); 
+    }
 }
 
 .skills span:not(:last-child)::after {
@@ -55,8 +62,18 @@
     top: 50%;
     left: 100%;
     margin-left: 24px;
-    transform: translate(0, -50%)
+    transform: translate(0, -50%);
 }
+
+.skills-wraper.rotated {
+    background-color: var(--light-grey);
+    transform: rotate(2deg);
+}
+
+.skills.reverse {
+    animation: marquee-revers 40s linear infinite;
+}
+
 
 
 
