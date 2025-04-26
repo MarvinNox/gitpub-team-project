@@ -91,7 +91,7 @@ function createGallery(projects) {
     <button class="button-my-project" onclick="window.open('https://github.com/Marakasss/gitpub-team-project', '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="14.5" width="14.5">
-        <use class="svg-visit-my-project" href="/img/sprite.svg#icon-visit-arrow"></use>
+        <use class="svg-visit-my-project" href="/sprite.svg#icon-visit-arrow"></use>
       </svg>
     </button>
   </div>
