@@ -64,7 +64,7 @@ const allProjects = [
     }
 ];
 
-const BASE_URL = "/gitpub-team-project"
+const BASE_URL = import.meta.env.BASE_URL;
 
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.btn-load-more-my-project');
@@ -91,7 +91,7 @@ function createGallery(projects) {
     <button class="button-my-project" onclick="window.open('https://github.com/Marakasss/gitpub-team-project', '_blank')">
       <span class="visit-my-project">VISIT</span>
       <svg class="svg-my-project" height="14.5" width="14.5">
-        <use class="svg-visit-my-project" href="/sprite.svg#icon-visit-arrow"></use>
+        <use class="svg-visit-my-project" href="/assets/sprite.svg#icon-visit-arrow"></use>
       </svg>
     </button>
   </div>
