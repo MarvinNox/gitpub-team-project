@@ -88,6 +88,11 @@
   outline: none;
 }
 
+.reviews-arrow{
+  fill: black;
+  stroke: black;
+}
+
 @media screen and (min-width: 768px) {
   .reviews-title{
     font-size: 108px;
