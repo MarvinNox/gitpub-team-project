@@ -56,12 +56,14 @@ function initSwiper() {
       onlyInViewport: true,
     },
     slidesPerView: 1,
+    spaceBetween: 20,
     breakpoints: {
       1280: {
         slidesPerView: 2,
         spaceBetween: 32,
       },
     },
+    grabCursor: true,
     on: {
       reachEnd(swiper) {
         swiper.navigation.nextEl.classList.add('reviews-button-disabled');

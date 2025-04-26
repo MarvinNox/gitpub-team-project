@@ -7,6 +7,7 @@ import SortCss from 'postcss-sort-media-queries';
 export default defineConfig(({ command }) => {
   return {
     define: {
+      base: "/gitpub-team-project/",
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',

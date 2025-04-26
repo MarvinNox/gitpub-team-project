@@ -1,0 +1,277 @@
+body {
+    &.dark {
+        .section {
+            background-color: var(--black-dt);
+        }
+        .hedline-my-projects{
+            color: #F0F0F0;
+        }
+        .hedline-span-my-project{
+            color: #14C57C;
+
+        }
+        .text-my-project{
+            color: #F0F0F0;
+        }
+        .names-my-project{
+            color: #F0F0F0;
+        }
+        .visit-my-project{
+            color: #F0F0F0;
+
+        }
+        .button-my-project{
+           background-color: #2A2D32;
+        }
+        .button-my-project:hover{
+            background: #3B3F45;
+        }
+        .btn-load-more-my-project{
+            background: #1E2023;
+        }
+        .load-more-span-my-project{
+            color: #F0F0F0;
+        }
+        .load-more-span-my-project:hover{
+            color:  #14C57C;
+        }
+    }
+}
+
+
+
+/* Заголовок проекта */
+.hedline-my-projects {
+    min-width: 291px;
+    min-height: 64px;
+    color: #292929;
+    font-family: Impact;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 1.8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    transition: font-size 1s ease, line-height 1s ease;
+}
+
+.hedline-span-my-project {
+    color: #00B068;
+}
+
+@media screen and (min-width: 768px) {
+    .hedline-my-projects {
+        min-width: 584px;
+        min-height: 128px;
+        line-height: 124px;
+        font-size: 108px;
+    }
+}
+
+/* Галерея - <li> для центрирования */
+.gallery li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Картинка проекта */
+.image-my-project {
+    width: 320px;
+    height: 184px;
+    border-radius: 16px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 1s ease, height 1s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .image-my-project {
+        width: 704px;
+        height: 404px;
+        border-radius: 24px;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .image-my-project {
+        width: 1008px;
+        height: 580px;
+        margin-top: 80px;
+    }
+}
+
+.gallery-link {
+    display: inline-block;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-link img {
+    display: block;
+}
+
+/* Контейнер текста и кнопки */
+.div-my-project {
+    position: relative;
+    width: 320px;
+    height: 184px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 1s ease, height 1s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .div-my-project {
+        width: 704px;
+        height: 92px;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .div-my-project {
+        width: 1008px;
+    }
+}
+
+/* Текст скиллов */
+.text-my-project {
+    width: 251px;
+    height: 24px;
+    color: #292929;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+
+@media screen and (min-width: 768px) {
+    .text-my-project {
+        width: 516.04px;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .text-my-project {
+        width: 719.81px;
+    }
+}
+
+/* Названия проектов */
+.names-my-project {
+    width: 320px;
+    height: 80px;
+    color:  #292929;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: width 1s ease, height 1s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .names-my-project {
+        width: 547px;
+        height: 48px;
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .names-my-project {
+        width: 763px;
+        height: 48px;
+        top: 44px;
+    }
+}
+
+/* Кнопка VISIT */
+.button-my-project {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 125px;
+    min-height: 48px;
+    border-radius: 8px;
+    background: #E4E5E6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 24px;
+    transition: all 0.3s ease-in-out;
+}
+.button-my-project:hover{
+    background: #BBBBBB;
+}
+
+.visit-my-project {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color:  #292929;
+}
+
+/* Кнопка "Load more" */
+.btn-load-more-my-project {
+    display: block;
+    width: 154px;
+    height: 52px;
+    padding: 12px 24px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 2px solid #00B068;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-load-more-my-project {
+        width: 165px;
+        height: 56px;
+    }
+}
+
+.load-more-span-my-project {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.load-more-span-my-project:hover,
+.load-more-span-my-project:focus {
+    color: #00B068;
+}
+
+.btn-load-more-my-project.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+
