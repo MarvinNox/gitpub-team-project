@@ -21,10 +21,19 @@ body {
 
         }
         .button-my-project{
-           color: #2A2D32;
+           background-color: #2A2D32;
         }
         .button-my-project:hover{
             background: #3B3F45;
+        }
+        .btn-load-more-my-project{
+            background: #1E2023;
+        }
+        .load-more-span-my-project{
+            color: #F0F0F0;
+        }
+        .load-more-span-my-project:hover{
+            color:  #14C57C;
         }
     }
 }
