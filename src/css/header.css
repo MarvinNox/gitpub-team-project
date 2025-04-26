@@ -11,6 +11,9 @@ body {
     }
     .header--nav--list-link {
       color: var(--white);
+      &:hover {
+        color: var(--accet-green-dt);
+      }
     }
     .header--burger-icon {
       fill: var(--white);
