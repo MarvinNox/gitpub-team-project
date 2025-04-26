@@ -2,7 +2,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
-const form = document.getElementById('form');
+const form = document.getElementById('work-together-form');
 let query = { email: '', comment: '' };
 
 form.addEventListener('submit', evt => {
@@ -25,7 +25,7 @@ const serverRequest = async query => {
   const url = 'https://portfolio-js.b.goit.study/api/requests';
   try {
     const serverResponse = await axios.post(url, query);
-    showPopUp(serverResponse.data.title, serverResponse.data.message);
+    // showPopUp(serverResponse.data.title, serverResponse.data.message);
     console.log(serverResponse);
     form.reset();
   } catch (error) {
@@ -38,9 +38,17 @@ const serverRequest = async query => {
   }
 };
 
-const showPopUp = (title, message) => {
-  document.getElementById('popUpTitle').innerText = `${title}`;
-  document.getElementById('popUpMessage').innerText = `${message}`;
-  const closeModalBtn = document.querySelector('[modal-close]');
-  closeModalBtn.addEventListener('click', toggleModal);
-};
+// const showPopUp = (title, message) => {
+//   document.getElementById('modal').classList.toggle('is-open');
+//   document.getElementById('work-together-popup-title').innerText = `${title}`;
+//   document.getElementById(
+//     'work-together-popup-paragraph'
+//   ).innerText = `${message}`;
+//   const closeModalBtn = document.getElementById(
+//     'work-together-popup-close-icon'
+//   );
+//     closeModalBtn.addEventListener('click', toggleModal);
+//     toggleModal(){
+//         document.getElementById("modal").classList.remove('is-open');
+//     }
+// };
