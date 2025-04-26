@@ -139,4 +139,4 @@ function createGallery(projects) {
 
 
 // Обработчик кнопки "LOAD MORE" — включает скролл
-loadMoreBtn.addEventListener('click'
+loadMoreBtn.addEventListener('click',loadNextProjects);
