@@ -21,9 +21,9 @@ const allProjects = [
         alt: "English Exellence website"
     },
     {
-        src1x: '/my-projects/rectangle-10-1x.jpg',  
-        src2x: '/my-projects/rectangle-10-2x.jpg',
-        src: '/my-projects/rectangle-10-1x.jpg',
+        src1x: './my-projects/rectangle-10-1x.jpg',  
+        src2x: './my-projects/rectangle-10-2x.jpg',
+        src: './my-projects/rectangle-10-1x.jpg',
         alt: "power pulse webservice"
     },
     {
@@ -64,6 +64,8 @@ const allProjects = [
     }
 ];
 
+const BASE_URL = "/gitpub-team-project"
+
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.btn-load-more-my-project');
 
@@ -81,7 +83,7 @@ function createGallery(projects) {
       return `
       <li>
   <a href="${src}" class="gallery-link">
-    <img class="image-my-project" srcset="${src1x} 1x, ${src2x} 2x" src="${src}" alt="${alt}" />
+    <img class="image-my-project" srcset="${BASE_URL}${src1x} 1x, ${BASE_URL}${src2x} 2x" src="${BASE_URL}${src}" alt="${alt}" />
   </a>
   <div class="div-my-project">
     <p class="text-my-project">React, JavaScript, Node JS, Git</p>
