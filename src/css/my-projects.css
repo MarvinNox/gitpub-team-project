@@ -170,13 +170,9 @@
     padding: 12px 24px;
     transition: all 0.3s ease-in-out;
 }
-
-/* .svg-my-project {
-    overflow: visible;
-    width: 14.5px;
-    height: 14.5px;
-    stroke: #00B068;
-} */
+.button-my-project:hover{
+    background: #BBBBBB;
+}
 
 .visit-my-project {
     font-family: Poppins;
