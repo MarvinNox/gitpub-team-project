@@ -3,21 +3,21 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const allProjects = [
     {
-        src1x: './my-projects/rectangle-11-1x.jpg',  
-        src2x: './my-projects/rectangle-11-2x.jpg',
-        src: './my-projects/rectangle-11-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-11-1x.jpg',  
+        src2x: '/gitpub-team-project/my-projects/rectangle-11-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-11-1x.jpg',
         alt: "Wallet webservice "
     },
     {
-        src1x: './my-projects/rectangle-9-1x.jpg',  
-        src2x: './my-projects/rectangle-9-2x.jpg',
-        src: './my-projects/rectangle-9-1x.jpg',
+        src1x: '/gitpub-team-project/gitpub-team-project/my-projects/rectangle-9-1x.jpg',  
+        src2x: '/gitpub-team-project/gitpub-team-project/my-projects/rectangle-9-2x.jpg',
+        src: '/gitpub-team-project/gitpub-team-project/my-projects/rectangle-9-1x.jpg',
         alt: "Green harvest webservice"
     },
     {
-        src1x: './my-projects/rectangle-12-1x.jpg',  
-        src2x: './my-projects/rectangle-12-2x.jpg',
-        src: './my-projects/rectangle-12-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-12-1x.jpg',  
+        src2x: '/gitpub-team-project/my-projects/rectangle-12-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-12-1x.jpg',
         alt: "English Exellence website"
     },
     {
@@ -27,39 +27,39 @@ const allProjects = [
         alt: "power pulse webservice"
     },
     {
-        src1x: './my-projects/rectangle-7-1x.jpg',
-        src2x: './my-projects/rectangle-7-2x.jpg',
-        src: './my-projects/rectangle-7-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-7-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/rectangle-7-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-7-1x.jpg',
         alt: "mimino website"
     },
     {
-        src1x: './my-projects/rectangle-8-1x.jpg',
-        src2x: './my-projects/rectangle-8-2x.jpg',
-        src: './my-projects/rectangle-8-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-8-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/rectangle-8-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-8-1x.jpg',
         alt: "vyshyvanka vibes Landing Page"
     },
     {
-        src1x: './my-projects/rectangle-6-1x.jpg',
-        src2x: './my-projects/rectangle-6-2x.jpg',
-        src: './my-projects/rectangle-6-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-6-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/rectangle-6-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-6-1x.jpg',
         alt: "chego jewelry website"
     },
     {
-        src1x: './my-projects/rectangle-4-1x.jpg',
-        src2x: './my-projects/rectangle-4-2x.jpg',
-        src: './my-projects/rectangle-4-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-4-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/rectangle-4-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-4-1x.jpg',
         alt: "energy flow webservice"
     },
     {
-        src1x: './my-projects/rectangle-5-1x.jpg',
-        src2x: './my-projects/rectangle-5-2x.jpg',
-        src: './my-projects/rectangle-5-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/rectangle-5-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/rectangle-5-2x.jpg',
+        src: '/gitpub-team-project/my-projects/rectangle-5-1x.jpg',
         alt: "fruitbox online store"
     },
     {
-        src1x: './my-projects/first-screen-1-1x.jpg',
-        src2x: './my-projects/first-screen-1-2x.jpg',
-        src: './my-projects/first-screen-1-1x.jpg',
+        src1x: '/gitpub-team-project/my-projects/first-screen-1-1x.jpg',
+        src2x: '/gitpub-team-project/my-projects/first-screen-1-2x.jpg',
+        src: '/gitpub-team-project/my-projects/first-screen-1-1x.jpg',
         alt: "starlight studio landing page"
     }
 ];
