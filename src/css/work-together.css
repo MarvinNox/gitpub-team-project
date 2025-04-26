@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  z-index: 1;
   @media only screen and (min-width: 768px) {
     gap: 60px;
   }
@@ -40,7 +41,7 @@
   line-height: 1.23;
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: var(--accet-green);
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
   @media only screen and (min-width: 768px) {
     font-size: 108px;
     line-height: 1.14;
@@ -48,7 +49,7 @@
 }
 
 .work-together-lets {
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
 }
 
 .work-together-caption {
@@ -57,7 +58,7 @@
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.5px;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
   text-transform: uppercase;
   @media only screen and (min-width: 768px) {
     font-size: 20px;
@@ -82,7 +83,7 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
@@ -95,8 +96,6 @@
 }
 .work-together-form {
   width: 100%;
-  /* height: auto; */
-  /* word-wrap: break-word; */
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -118,8 +117,8 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  color: var(--black);
-  background-color: var(--light-grey);
+  color: light-dark(var(--black), var(--white-dt));
+  background-color: light-dark(var(--light-grey), var(--charcoal-dt));
   border: 0;
   outline: 0;
 }
@@ -134,9 +133,9 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
   padding: 16px;
-  background-color: var(--light-grey);
+  background-color: light-dark(var(--light-grey), var(--charcoal-dt));
   border: 0;
   outline: 0;
 }
@@ -150,13 +149,13 @@
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
-  background-color: var(--accet-green);
+  background-color: light-dark(var(--accet-green), var(--accet-green-dt));
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.5px;
-  color: var(--white);
+  color: light-dark(var(--white), var(--white-dt));
   white-space: nowrap;
   text-transform: capitalize;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -174,7 +173,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -2;
 }
 /* ------------------Modal---------------------- */
 .work-together-modal.is-open {
