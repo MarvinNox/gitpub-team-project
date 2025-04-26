@@ -57,7 +57,7 @@ body {
     white-space: nowrap;
     position: relative;
 
-    &:hover .skills {
+    &:hover .skills  {
             animation-play-state: paused;
         }
 }
@@ -106,7 +106,7 @@ body {
 
 .skills-wraper.rotated {
     background-color: var(--light-grey);
-    transform: rotate(2deg) !important;
+    transform: rotate(2deg);
 }
 
 .skills.reverse {
