@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const swiperWrapper = document.querySelector('.swiper-wrapper');
-const notFoundText = document.querySelector('.not-found');
+const notFoundText = document.querySelector('.reviews-not-found');
 
 async function fetchReviews() {
   try {
