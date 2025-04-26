@@ -33,6 +33,12 @@ body {
   margin: 0;
 }
 
+body {
+  &.dark {
+    background-color: var(--black-dt);
+  }
+}
+
 .section
  {
   margin-bottom: 80px;
