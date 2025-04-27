@@ -3,12 +3,6 @@
   scrollbar-width: thin;
 }
 
-body {
-  &.dark {
-    color-scheme: dark;
-  }
-}
-
 .hero {
   position: relative;
   background-color: light-dark(var(--white), var(--black-dt));
