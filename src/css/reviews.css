@@ -1,7 +1,58 @@
+body {
+  &.dark {
+    .reviews-title {
+      color: var(--white);
+    }
+
+    .review-card {
+      background: var(--charcoal-dt);
+    }
+
+    .review-text {
+      color: var(--white);
+    }
+
+    .review-author-name {
+      color: var(--white);
+    }
+    .reviews-button {
+      border: 1px solid var(--charcoal-dt);
+      background: transparent;
+    }
+
+    .reviews-button:hover {
+      background: var(--charcoal-dt);
+    }
+
+    .reviews-button-prev:disabled {
+      border: 1px solid var(--charcoal-dt);
+      color: var(--charcoal-dt);
+    }
+
+    .reviews-button-disabled {
+      border: 1px solid var(--charcoal-dt);
+      color: var(--charcoal-dt);
+    }
+
+    .reviews-arrow {
+      stroke: var(--white);
+    }
+
+    .reviews-button-disabled .reviews-arrow {
+      stroke: var(--charcoal-dt);
+    }
+
+    .reviews-button-prev:disabled .reviews-arrow {
+      stroke: var(--charcoal-dt);
+    }
+  }
+}
+
 .swiper-wrapper {
   /*display: flex !important;*/
   /*align-items: stretch;*/
 }
+
 .reviews {
   text-align: center;
 }
@@ -14,7 +65,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--black);
-  margin-bottom: 40px                     ;
+  margin-bottom: 40px;
 }
 
 .review-card {
@@ -59,18 +110,26 @@
   color: var(--black);
 }
 
-.reviews-navigation{
+.reviews-navigation {
   margin-top: 24px;
   display: flex;
   justify-content: flex-end;
   gap: 16px;
 }
 
-.reviews-button-prev, .reviews-button-next {
+.reviews-button {
+  padding: 0;
   border: 1px solid var(--black);
   border-radius: 8px;
   width: 40px;
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-button:hover {
+  background: var(--light-grey);
 }
 
 .reviews-button-prev:disabled {
@@ -88,18 +147,33 @@
   outline: none;
 }
 
-.reviews-arrow{
-  fill: black;
-  stroke: black;
+.reviews-arrow {
+  fill: transparent;
+  stroke: var(--black);
+}
+
+.reviews-button-disabled .reviews-arrow {
+  stroke: var(--light-grey);
+}
+
+.reviews-button-prev:disabled .reviews-arrow {
+  background: transparent;
+  pointer-events: none;
+  stroke: var(--light-grey);
+}
+
+.reviews-arrow-prev {
+  transform: rotate(180deg);
 }
 
 @media screen and (min-width: 768px) {
-  .reviews-title{
+  .reviews-title {
     font-size: 108px;
     line-height: 1.15;
     letter-spacing: 0.02em;
     margin-bottom: 60px;
   }
+
   .review-card {
     height: 224px;
   }
@@ -109,7 +183,13 @@
   .review-card {
     height: 248px;
   }
-  .reviews-title{
+
+  .reviews-title {
     margin-bottom: 80px;
+  }
+
+  .reviews-button {
+    width: 48px;
+    height: 48px;
   }
 }

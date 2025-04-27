@@ -11,6 +11,10 @@ body {
     }
     .header--nav--list-link {
       color: var(--white);
+      &:hover,
+      &:focus-within {
+        color: var(--accet-green-dt);
+      }
     }
     .header--burger-icon {
       fill: var(--white);
@@ -91,7 +95,8 @@ nav {
   transition: all 300ms ease-in-out;
   padding: 20px 0px;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: var(--accet-green);
   }
 

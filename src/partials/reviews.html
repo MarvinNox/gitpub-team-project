@@ -1,18 +1,3 @@
-<!-- Деякі загальні домовленості щоб усе це мало хоч трохи чистий вигляд.
-
-1. Класи називаємо у кебаб стилі типу header-title, card-wrapper, star-wars, тощо...
-2. Вказуючи ID для якірних посилань називаємо їх ідентично до своєї секції.
-3. У JS оголошуємо функції Function Declaration, уникаємо стрілок і Expression (але якщо вже дуже хочеться - то що вже)) )
-
-function sum(a, b) {
-      return a + b;
-    }
-
-4. Також у JS залишаємо хоча б мінімальні коментарі
-5. Класи section, container, задають мінімальний базовий скелет сторінки
-якщо захочеться до них щось додати подумай три рази
-6. Щоб глянути яку назву яка іконка має у спрайті залишу скрін у папці img (sprite.jpg) -->
-
 <section class="reviews" id="reviews">
   <div class="container">
     <h2 class="reviews-title">Reviews</h2>
@@ -22,13 +7,15 @@ function sum(a, b) {
       </ul>
       <div class="reviews-not-found" hidden>Not found</div>
       <div class="reviews-navigation">
-        <button type="button" class="reviews-button-prev">
-          <svg width="24" height="24" class="reviews-arrow">
-            <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
+        <button type="button" class="reviews-button reviews-button-prev">
+          <svg width="24" height="24" class="reviews-arrow reviews-arrow-prev">
+            <use href="./img/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
-        <button type="button" class="reviews-button-next">
-          →
+        <button type="button" class="reviews-button reviews-button-next">
+          <svg width="24" height="24" class="reviews-arrow reviews-arrow-next">
+            <use href="./img/sprite.svg#icon-arrow"></use>
+          </svg>
         </button>
       </div>
     </div>

@@ -28,14 +28,13 @@
 
 
 body {
-  background-color: var(--white);
+  color-scheme: light;
+  background-color: light-dark(var(--white), var(--black-dt));
   font-family: var(--font-family);
   margin: 0;
-}
 
-body {
   &.dark {
-    background-color: var(--black-dt);
+    color-scheme: dark;
   }
 }
 
