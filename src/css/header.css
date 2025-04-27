@@ -1,39 +1,13 @@
 body {
   &.dark {
-    .header {
-      background-color: var(--black-dt);
-    }
-    .header--logo {
-      color: var(--white);
-    }
-    .header--logo-sub {
-      color: var(--accet-green-dt);
-    }
-    .header--nav--list-link {
-      color: var(--white);
-      &:hover,
-      &:focus-within {
-        color: var(--accet-green-dt);
-      }
-    }
     .header--burger-icon {
       fill: var(--white);
-      stroke: var(--white);
-    }
-    .header--slider {
-      background-color: var(--dark-accet-dt);
-    }
-    .header--slider::before {
-      background-color: var(--accet-green-dt);
-    }
-    .header--toggle input:checked + .header--slider {
-      background-color: var(--charcoal-dt);
     }
   }
 }
 
 .header {
-  background-color: var(--white);
+  background-color: light-dark(var(--white), var(--black-dt));
 }
 
 .header > .container {
@@ -54,7 +28,7 @@ nav {
   line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white));
   font-family: var(--second-family);
   transition: all 300ms ease-in-out;
   padding: 20px 0px;
@@ -67,7 +41,7 @@ nav {
 }
 
 .header--logo-sub {
-  color: var(--accet-green);
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
 }
 
 .header--nav-list {
@@ -91,13 +65,13 @@ nav {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white));
   transition: all 300ms ease-in-out;
   padding: 20px 0px;
 
   &:hover,
   &:focus-within {
-    color: var(--accet-green);
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
   }
 
   @media screen and (width >= 768px) {
@@ -120,7 +94,7 @@ nav {
 .header--burger-icon {
   height: 32px;
   width: 32px;
-  stroke: var(--black);
+  stroke: light-dark(var(--black), var(--white));
   align-items: center;
 }
 
@@ -141,7 +115,7 @@ nav {
 .header--slider {
   position: absolute;
   cursor: pointer;
-  background-color: var(--light-grey);
+  background-color: light-dark(var(--light-grey), var(--dark-accet-dt));
   border-radius: 16px;
   top: 0;
   left: 0;
@@ -157,7 +131,7 @@ nav {
   width: 20px;
   left: 2px;
   top: 2px;
-  background-color: var(--accet-green);
+  background-color: light-dark(var(--accet-green), var(--accet-green-dt));
   border-radius: 50%;
   transition: transform 0.3s;
 }
@@ -170,5 +144,5 @@ nav {
   background-position: right;
 }
 .header--toggle input:checked + .header--slider {
-  background-color: var(--black);
+  background-color: light-dark(var(--black), var(--charcoal-dt));
 }
