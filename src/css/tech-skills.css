@@ -1,37 +1,3 @@
-body {
-    &.dark {
-        .skills-wraper {
-            background: var(--dark-accet-dt);
-        }
-
-        .skills-wraper.rotated {
-            background: var(--charcoal-dt);
-        }
-
-        .skills span {
-            color: var(--white);
-            &:hover {
-                    color: var(--accet-green-dt);
-                }
-        }
-
-        .skills.reverse span {
-            color: var(--accet-green-dt);
-        
-            &:hover {
-                color: var(--hover-grey);
-            }
-        }
-
-        .skills span:not(:last-child)::after {
-            background: var(--accet-green-dt);
-        }
-
-        .skills.reverse span:not(:last-child)::after {
-            background: var(--white);
-        }
-    }
-}
 
 
 .visually-hidden {
@@ -53,13 +19,18 @@ body {
     align-items: center;
     overflow: hidden;
     padding: 32px 0;
-    background: var(--light-accent);
+    background: light-dark(var(--light-accent), var(--dark-accet-dt));
     white-space: nowrap;
     position: relative;
 
     &:hover .skills  {
             animation-play-state: paused;
         }
+}
+
+ .skills-outer {
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .skills {
@@ -77,12 +48,12 @@ body {
     line-height: 1.25;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--black);
+    color: light-dark(var(--black), var(--white));
     white-space: nowrap;
 
     &:hover {
         cursor: pointer;
-        color: var(--accet-green); 
+        color: light-dark(var(--accet-green), var(--accet-green-dt)); 
     }
 }
 
@@ -91,7 +62,7 @@ body {
     display: inline-block;
     width: 8px;
     height: 8px;
-    background: var(--accet-green);
+    background: light-dark(var(--accet-green), var(--accet-green-dt));
     border-radius: 2px;
     position: absolute;
     top: 50%;
@@ -101,11 +72,11 @@ body {
 }
 
 .skills.reverse span:not(:last-child)::after {
-    background: var(--black);
+    background: light-dark(var(--black), var(--white));
 }
 
 .skills-wraper.rotated {
-    background-color: var(--light-grey);
+    background-color: light-dark(var(--light-grey), var(--charcoal-dt));
     transform: rotate(2deg);
 }
 
@@ -114,10 +85,10 @@ body {
 }
 
 .skills.reverse span {
-    color: var(--accet-green);
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
 
     &:hover {
-            color: var(--black);
+            color: var(--black), var(--hover-grey);
         }
 }
 
