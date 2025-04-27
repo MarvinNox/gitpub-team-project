@@ -1,66 +1,20 @@
-body {
-  &.dark {
-    .hero {
-      background-color: var(--black-dt);
-    }
-    .hero--title {
-      color: var(--white-dt);
-    }
-    .hero--link {
-      color: var(--white-dt);
-    }
-    .hero--text {
-      color: var(--white-dt);
-    }
-    .hero--title-sub {
-      color: var(--accet-green-dt);
-    }
-    .hero--links-bar {
-      background-color: var(--charcoal-dt);
-    }
-    .hero--socials-links {
-      color: var(--white-dt);
-    }
-    .hero--socials-links:hover,
-    .hero--socials-links:focus-within {
-      color: var(--accet-green-dt);
-    }
-    .hero--btn::after {
-      background-color: var(--hover-green-dt);
-    }
-    .hero--btn:hover::after,
-    .hero--btn:focus-within::after {
-      background-color: var(--accet-green-dt);
-    }
-  }
+:root {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 .hero {
   position: relative;
-  background-color: var(--white);
+  background-color: light-dark(var(--white), var(--black-dt));
   z-index: 1;
 }
 
-.hero.section {
-  padding: 0;
-}
-
 .hero > .container {
-  box-sizing: border-box;
-  max-width: 360px;
-  padding: 0 20px;
-
   padding-top: 112px;
   position: relative;
 
   @media screen and (width >= 768px) {
-    max-width: 768px;
-    padding: 0 32px;
     padding-top: 88px;
-  }
-
-  @media only screen and (width >= 1280px) {
-    max-width: 1280px;
   }
 }
 
@@ -70,24 +24,31 @@ body {
   font-size: 64px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-
+  max-width: 100%;
   text-transform: uppercase;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
   transition: all 200ms ease-in-out;
 
+  @media screen and (width < 320px) {
+    font-size: clamp(48px, 5vh, 64px);
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
   @media screen and (width >= 768px) {
-    font-size: 124px;
+    font-size: 136px;
     line-height: 1.14706;
     letter-spacing: 0.01em;
   }
 
   @media screen and (width >= 1280px) {
+    font-size: 124px;
     max-width: 552px;
   }
 }
 
 .hero--title-sub {
-  color: var(--accet-green);
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
 }
 .hero--wrapper {
   display: flex;
@@ -149,14 +110,14 @@ body {
     border-radius: 16px;
     width: 176px;
     height: 92px;
-    background-color: var(--light-accent);
+    background-color: light-dark(var(--light-accent), var(--hover-green-dt));
     z-index: -1;
     transition: all 200ms ease-in-out;
   }
 
   &:hover::after,
   &:focus-within::after {
-    background: var(--accet-green);
+    background: light-dark(var(--accet-green), var(--accet-green-dt));
   }
 
   &:hover .hero--icon,
@@ -208,7 +169,7 @@ body {
   line-height: 1.55556;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
 
   transition: all 300ms linear;
 
@@ -230,7 +191,7 @@ body {
   line-height: 1.55556;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white-dt));
 
   @media screen and (width >= 768px) {
     font-size: 20px;
@@ -249,7 +210,7 @@ body {
   justify-content: center;
   padding: 32px 0;
   width: auto;
-  background-color: var(--light-grey);
+  background-color: light-dark(var(--light-grey), var(--charcoal-dt));
 
   @media screen and (width >= 768px) {
     padding: 40px 0;
@@ -275,13 +236,13 @@ body {
 
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: light-dark(var(--accet-green), var(--white-dt));
 
   transition: all 300ms ease-in-out;
 
   &:hover,
   &:focus-within {
-    color: var(--accet-green);
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
   }
 }
 
