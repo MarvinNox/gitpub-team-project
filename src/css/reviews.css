@@ -15,6 +15,7 @@ body {
     .review-author-name {
       color: var(--white);
     }
+
     .reviews-button {
       border: 1px solid var(--charcoal-dt);
       background: transparent;
@@ -27,6 +28,11 @@ body {
     .reviews-button-prev:disabled {
       border: 1px solid var(--charcoal-dt);
       color: var(--charcoal-dt);
+      background-color: transparent;
+    }
+
+    .reviews-button-next:disabled {
+      background-color: transparent;
     }
 
     .reviews-button-disabled {
@@ -48,10 +54,15 @@ body {
   }
 }
 
-.swiper-wrapper {
-  /*display: flex !important;*/
-  /*align-items: stretch;*/
-}
+/*.swiper-wrapper {*/
+/*  display: flex;*/
+/*  align-items: stretch;*/
+/*}*/
+/*.swiper-slide {*/
+/*  height: 100%;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*}*/
 
 .reviews {
   text-align: center;
@@ -76,7 +87,7 @@ body {
   padding: 32px;
   border-radius: 16px;
   text-align: left;
-  height: 368px;
+  min-height: 304px;
 }
 
 .review-text {
@@ -132,6 +143,10 @@ body {
   background: var(--light-grey);
 }
 
+.reviews-button:disabled {
+  background: transparent;
+}
+
 .reviews-button-prev:disabled {
   border: 1px solid var(--light-grey);
   color: var(--light-grey);
@@ -175,13 +190,13 @@ body {
   }
 
   .review-card {
-    height: 224px;
+    min-height: 160px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .review-card {
-    height: 248px;
+    min-height: 184px;
   }
 
   .reviews-title {
