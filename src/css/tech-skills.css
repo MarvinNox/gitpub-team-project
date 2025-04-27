@@ -1,0 +1,138 @@
+body {
+    &.dark {
+        .skills-wraper {
+            background: var(--dark-accet-dt);
+        }
+
+        .skills-wraper.rotated {
+            background: var(--charcoal-dt);
+        }
+
+        .skills span {
+            color: var(--white);
+            &:hover {
+                    color: var(--accet-green-dt);
+                }
+        }
+
+        .skills.reverse span {
+            color: var(--accet-green-dt);
+        
+            &:hover {
+                color: var(--hover-grey);
+            }
+        }
+
+        .skills span:not(:last-child)::after {
+            background: var(--accet-green-dt);
+        }
+
+        .skills.reverse span:not(:last-child)::after {
+            background: var(--white);
+        }
+    }
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.skills-wraper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 32px 0;
+    background: var(--light-accent);
+    white-space: nowrap;
+    position: relative;
+
+    &:hover .skills  {
+            animation-play-state: paused;
+        }
+}
+
+.skills {
+    display: inline-flex;
+    gap: 56px;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+}
+
+.skills span {
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
+    white-space: nowrap;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--accet-green); 
+    }
+}
+
+.skills span:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accet-green);
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 24px;
+    transform: translate(0, -50%);
+}
+
+.skills.reverse span:not(:last-child)::after {
+    background: var(--black);
+}
+
+.skills-wraper.rotated {
+    background-color: var(--light-grey);
+    transform: rotate(2deg);
+}
+
+.skills.reverse {
+    animation: marquee-revers 40s linear infinite;
+}
+
+.skills.reverse span {
+    color: var(--accet-green);
+
+    &:hover {
+            color: var(--black);
+        }
+}
+
+
+
+@media screen and (min-width: 768px) {
+   
+    .skills span {
+        font-size: 36px;
+        line-height: 1.33;
+        letter-spacing: 0.01em;
+    }
+
+    .skills-wraper {
+        padding: 40px 0;
+    }
+
+}

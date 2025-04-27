@@ -1,7 +1,10 @@
 import { detectTheme, refs, toggleSwitcher } from "./js/theme-switcher";
 import { refsScroll, scrollUpBtnShow, scrollUp } from "./js/scroll-up"
 import {loadNextProjects} from './js/my-projects'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 
 detectTheme();
 refs.themeToggler.addEventListener('change', toggleSwitcher);
