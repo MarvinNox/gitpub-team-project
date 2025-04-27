@@ -1,34 +1,34 @@
 body.dark {
   .about-me {
-    background-color: var(--black-dt); /* Темний фон */
+    background-color: var(--black-dt); 
   }
 
   .about-title {
-    color: var(--white-dt); /* Білий текст для заголовка About Me */
+    color: var(--white-dt); 
   }
 
   .highlight {
-    color: var(--accet-green-dt); /* Акцентний зелений для слова "Me" */
+    color: var(--accet-green-dt); 
   }
 
   .about-subtitle {
-    color: var(--white-dt); /* Білий текст для заголовка BIO */
+    color: var(--white-dt); 
   }
 
   .about-paragraph {
-    color: var(--white-dt); /* Білий текст для параграфів */
+    color: var(--white-dt); 
   }
 
   .about-column h2 {
-    color: var(--white-dt); /* Білий текст для заголовків Education і Role */
+    color: var(--white-dt); 
   }
 
   .about-list li {
-    color: var(--white-dt); /* Білий текст для пунктів списку */
+    color: var(--white-dt); 
   }
 
   .about-list li::before {
-    background-color: var(--accet-green-dt); /* Зелений квадратик у списку */
+    background-color: var(--accet-green-dt); 
   }
 }
 
@@ -83,7 +83,7 @@ body.dark {
   color: var(--dark-grey);
 }
 
-/* Секція колонок (EDUCATION + ROLE) */
+
 .columns {
   display: flex;
   flex-direction: column;
@@ -95,7 +95,7 @@ body.dark {
   text-align: left;
 }
 
-/* Список у колонках */
+
 .about-list li {
   font-size: 16px;
   line-height: 1.5;
@@ -119,7 +119,7 @@ body.dark {
 }
 
 .about-decor {
-  display: none; /* На мобільній версії декор або не потрібен, або маленький */
+  display: none; 
 }
 @media screen and (min-width: 768px) {
   .about-me {
@@ -141,8 +141,8 @@ body.dark {
   }
 
   .about-photo {
-    width: 336px; /* Трохи більше фото на планшеті */
-    flex-shrink: 0; /* Щоб фото не стискалося */
+    width: 336px; 
+    flex-shrink: 0; 
     margin-top: 384px;
     margin-bottom: 60px;
   }
@@ -165,23 +165,22 @@ body.dark {
   .about-paragraph {
    font-weight: 300;
     font-size: 16px;
-    /* line-height: 1.5; */
     letter-spacing: 0.03em;
-    /* margin-bottom: 24px; */
+  
 
   }
 
   .columns {
     flex-direction: row; 
     justify-content: center;
-    /* flex-wrap: wrap; */
+   
     gap: 32px;
    margin-top: 0;
   }
 
   .about-column {
     flex: 1 1 336px;
-    /* width: 336px; Кожна колонка займає 50% ширини */
+    
   }
   .about-decor {
     display: block;
@@ -214,7 +213,7 @@ body.dark {
   .about-list li::before {
     width: 8px;
     height: 8px;
-    top: 10px; /* трішки вище підняти для рівномірності */
+    top: 10px; 
     background-color: #00b068;
   }
 
