@@ -96,6 +96,13 @@
   width: 24px;
   height: 24px;
 }
+.contact {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
+  }
+}
 .work-together-form {
   width: 100%;
   display: flex;
