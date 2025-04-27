@@ -5,23 +5,39 @@ import axios from 'axios';
 const form = document.getElementById('work-together-form');
 let query = { email: '', comment: '' };
 
-form.addEventListener('submit', evt => {
-  evt.preventDefault();
-  query.email = form.elements.email.value.trim();
-  query.comment = form.elements.comment.value.trim();
-  if (!query.email || !query.comment) {
-    iziToast.error({
-      message: 'Please fill out all required fields',
-      backgroundColor: '#EF4040',
-      close: true,
-      position: 'topRight',
-    });
-    return;
-  }
-  serverRequest(query);
-});
+export const initWorkTogeter = () => {
+  const closeModalBtn = document.getElementById(
+    'work-together-modal-close-button'
+  );
+  const closeModalBackDrop = document.getElementById('work-together-modal');
+  closeModalBtn.addEventListener('click', closeModal);
+  closeModalBackDrop.addEventListener('click', function (event) {
+    if (
+      !document
+        .getElementById('work-together-modal-content')
+        .contains(event.target)
+    )
+      closeModal();
+  });
 
-export const serverRequest = async query => {
+  form.addEventListener('submit', evt => {
+    evt.preventDefault();
+    query.email = form.elements.email.value.trim();
+    query.comment = form.elements.comment.value.trim();
+    if (!query.email || !query.comment) {
+      iziToast.error({
+        message: 'Please fill out all required fields',
+        backgroundColor: '#EF4040',
+        close: true,
+        position: 'topRight',
+      });
+      return;
+    }
+    serverRequest(query);
+  });
+};
+
+const serverRequest = async query => {
   const url = 'https://portfolio-js.b.goit.study/api/requests';
   try {
     const serverResponse = await axios.post(url, query);
@@ -39,16 +55,20 @@ export const serverRequest = async query => {
 };
 
 const showModal = (title, message) => {
-  document.getElementById('work-together-modal').classList.toggle('is-open');
+  document.body.classList.add('no-scroll');
+  document.getElementById('work-together-modal').classList.add('is-open');
   document.getElementById('work-together-modal-caption').innerText = `${title}`;
   document.getElementById(
     'work-together-modal-paragraph'
   ).innerText = `${message}`;
-  const closeModalBtn = document.getElementById(
-    'work-together-modal-close-button'
-  );
-  closeModalBtn.addEventListener('click', closeModal);
-  function closeModal() {
-    document.getElementById('work-together-modal').classList.remove('is-open');
-  }
+  document.addEventListener('keyup', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 };
+
+function closeModal() {
+  document.getElementById('work-together-modal').classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+}
