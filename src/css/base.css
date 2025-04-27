@@ -24,10 +24,6 @@
   --third-family: 'Montserrat', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   color-scheme: light;
   background-color: light-dark(var(--white), var(--black-dt));
