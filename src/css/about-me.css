@@ -35,7 +35,7 @@ body.dark {
 
 .about-me {
   position: relative;
-  padding: 40px 20px;
+  padding: 0px 20px;
   background-color: var(--white);
 
 }
@@ -128,7 +128,7 @@ body.dark {
 }
 @media screen and (min-width: 768px) {
   .about-me {
-    padding: 62px 32px;
+    padding: 0px 32px;
     z-index: 0;
   }
 
@@ -229,7 +229,7 @@ body.dark {
 }
 @media screen and (min-width: 1293px) {
   .about-me {
-    padding: 82px 32px;
+    padding: 0px 32px;
     background-color: var(--white);
     
   }
