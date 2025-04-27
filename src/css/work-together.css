@@ -292,7 +292,7 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
-  color: light-dark((--black), var(--white-dt));
+  color: light-dark(var(--black), var(--white-dt));
 }
 .no-scroll {
   overflow: hidden;
