@@ -13,9 +13,59 @@ function sum(a, b) {
 якщо захочеться до них щось додати подумай три рази
 6. Щоб глянути яку назву яка іконка має у спрайті залишу скрін у папці img (sprite.jpg) -->
 
+<section class="section" id="work-together">
+  <div class="container work-together-wrapper">
+    <picture>
+      <source srcset="img/work-together/desktop-decor-bg-4-1x.png" media="(min-width: 1280px)" />
+      <source srcset="img/work-together/tablet-decor-bg-4-1x.png" media="(min-width: 768px)" />
+      <img src="" class="work-together-bg" />
+    </picture>
+    <h2 class="work-together-h2"><span class="work-together-lets">Let’s</span>&nbsp; work together</h2>
+    <div class="work-together-contacts-paragraph-form-wrapper">
+      <div class="work-together-contacts-paragraph-wrapper">
+        <p class="work-together-caption">Contact me to transform your ideas into exceptional solutions.</p>
+        <ul class="contacts">
+          <li class="contact-item"><svg class="contact-icon" width="24" height="24">
+              <use href="img/sprite.svg#icon-phone"></use>
+            </svg><a href="tel:+380904567890" class="contact">+38 090 456 78 90</a></li>
+          <li class="contact-item"><svg class="contact-icon" width="24" height="24">
+              <use href="img/sprite.svg#icon-mail"></use>
+            </svg><a href="mailto:lloydjefferson@gmail.com" class="contact">lloydjefferson@gmail.com</a></li>
+          <li class="contact-item">
+            <svg class="contact-icon" width="24" height="24">
+              <use href="img/sprite.svg#icon-location"></use>
+            </svg>
+            <p>USA, New York</p>
+          </li>
+        </ul>
+      </div>
 
-<section class="section">
-  <div class="container">
-    <!--TODO -->
+      <form action="submit" class="work-together-form" id="work-together-form">
+        <div class="work-together-input-wrap">
+          <input type="email" name="email" class="work-together-input" id="work-together-input" required
+            placeholder="Your email*" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+          <svg class="success-icon" width="14" height="14">
+            <use href="img/sprite.svg#success-filled"></use>
+          </svg>
+          <p class="validation-text"></p>
+        </div>
+
+        <textarea name="comment" class="work-together-text-area" id="work-together-text-area"
+          placeholder="Message"></textarea>
+        <button type="submit" class="work-together-btn" id="work-together-btn">Send message</button>
+      </form>
+    </div>
+
+    <div class="work-together-modal" id="work-together-modal">
+      <div class="work-together-modal-content" id="work-together-modal-content">
+        <button class="work-together-modal-close-button">
+          <svg class="work-together-modal-close-icon" id="work-together-modal-close-button" width="24" height="24">
+            <use href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="work-together-modal-caption" id="work-together-modal-caption"></p>
+        <p class="work-together-modal-paragraph" id="work-together-modal-paragraph"></p>
+      </div>
+    </div>
   </div>
 </section>
