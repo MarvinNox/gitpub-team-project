@@ -21,13 +21,15 @@ body {
     .hero--socials-links {
       color: var(--white-dt);
     }
-    .hero--socials-links:hover {
+    .hero--socials-links:hover,
+    .hero--socials-links:focus-within {
       color: var(--accet-green-dt);
     }
     .hero--btn::after {
       background-color: var(--hover-green-dt);
     }
-    .hero--btn:hover::after {
+    .hero--btn:hover::after,
+    .hero--btn:focus-within::after {
       background-color: var(--accet-green-dt);
     }
   }
@@ -152,15 +154,18 @@ body {
     transition: all 200ms ease-in-out;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus-within::after {
     background: var(--accet-green);
   }
 
-  &:hover .hero--icon {
+  &:hover .hero--icon,
+  &:focus-within .hero--icon {
     animation: btn-swipe 1200ms linear infinite;
   }
 
-  &:hover .hero--link {
+  &:hover .hero--link,
+  &:focus-within .hero--link {
     translate: 98px;
     color: var(--white);
 
@@ -274,7 +279,8 @@ body {
 
   transition: all 300ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: var(--accet-green);
   }
 }
