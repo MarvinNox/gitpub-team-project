@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio 2.0</title>
     <script type="module" crossorigin src="/gitpub-team-project/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/gitpub-team-project/assets/vendor-BjlWPKM0.js">
-    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/vendor-BcaDVdI0.css">
-    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-BY_HueXp.css">
+    <link rel="modulepreload" crossorigin href="/gitpub-team-project/assets/vendor-BDt1dWUS.js">
+    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/vendor-D0TPUbZ4.css">
+    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-B55DnEci.css">
   </head>
   <body>
     <header class="header">
@@ -40,7 +40,7 @@
       aria-label="open menu button"
     >
       <svg class="header--burger-icon" width="32" height="32">
-        <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-burger-btn"></use>
+        <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-burger-btn"></use>
       </svg>
     </button>
   </div>
@@ -88,7 +88,7 @@
     >
       <div class="hero--btn">
         <svg class="hero--icon" width="30" height="16">
-          <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-green-arrow"></use>
+          <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-green-arrow"></use>
         </svg>
         <a href="#work-together" class="hero--link">Order the project</a>
       </div>
@@ -287,26 +287,30 @@ function sum(a, b) {
   </div>
 </section>
 
-      <!-- Деякі загальні домовленості щоб усе це мало хоч трохи чистий вигляд.
-
-1. Класи називаємо у кебаб стилі типу header-title, card-wrapper, star-wars, тощо...
-2. Вказуючи ID для якірних посилань називаємо їх ідентично до своєї секції.
-3. У JS оголошуємо функції Function Declaration, уникаємо стрілок і Expression (але якщо вже дуже хочеться - то що вже)) )
-
-function sum(a, b) {
-      return a + b;
-    }
-                                                    
-4. Також у JS залишаємо хоча б мінімальні коментарі
-5. Класи section, container, задають мінімальний базовий скелет сторінки
-якщо захочеться до них щось додати подумай три рази
-6. Щоб глянути яку назву яка іконка має у спрайті залишу скрін у папці img (sprite.jpg) -->
-
-<section class="section">
+      <section class="reviews" id="reviews">
   <div class="container">
-    <!--TODO -->
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="swiper">
+      <ul class="swiper-wrapper">
+        <!-- Сюди динамічно підставляються відгуки -->
+      </ul>
+      <div class="reviews-not-found" hidden>Not found</div>
+      <div class="reviews-navigation">
+        <button type="button" class="reviews-button reviews-button-prev">
+          <svg width="24" height="24" class="reviews-arrow reviews-arrow-prev">
+            <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-arrow"></use>
+          </svg>
+        </button>
+        <button type="button" class="reviews-button reviews-button-next">
+          <svg width="24" height="24" class="reviews-arrow reviews-arrow-next">
+            <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
+
 
       <!-- Деякі загальні домовленості щоб усе це мало хоч трохи чистий вигляд.
 
@@ -351,19 +355,19 @@ function sum(a, b) {
         <ul class="contacts">
           <li class="contact-item">
             <svg class="contact-icon" width="24" height="24">
-              <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-phone"></use></svg
+              <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-phone"></use></svg
             ><a href="tel:+380904567890" class="contact">+38 090 456 78 90</a>
           </li>
           <li class="contact-item">
             <svg class="contact-icon" width="24" height="24">
-              <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-mail"></use></svg
+              <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-mail"></use></svg
             ><a href="mailto:lloydjefferson@gmail.com" class="contact"
               >lloydjefferson@gmail.com</a
             >
           </li>
           <li class="contact-item">
             <svg class="contact-icon" width="24" height="24">
-              <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-location"></use>
+              <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-location"></use>
             </svg>
             <p>USA, New York</p>
           </li>
@@ -382,7 +386,7 @@ function sum(a, b) {
             pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           />
           <svg class="success-icon" width="14" height="14">
-            <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#success-filled"></use>
+            <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#success-filled"></use>
           </svg>
           <p class="validation-text"></p>
         </div>
@@ -408,7 +412,7 @@ function sum(a, b) {
             width="24"
             height="24"
           >
-            <use href="/gitpub-team-project/assets/sprite-B7CrHXRV.svg#icon-close"></use>
+            <use href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-close"></use>
           </svg>
         </button>
         <p
