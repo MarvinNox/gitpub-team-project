@@ -35,13 +35,13 @@ body.dark {
 
 .about-me {
   position: relative;
-  padding: 0px 20px;
   background-color: var(--white);
 
 }
 
 .about-title {
-  font-family: var(--second-family);
+  font-family: "Impact", sans-serif;
+  color: var(--black);
   font-weight: 400;
   font-size: 52px;
   line-height: 1.2;
@@ -49,17 +49,19 @@ body.dark {
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 40px;
-
+  white-space: nowrap; 
 }
 .highlight {
   color: #00B068;
+  display: inline;
+  
 }
 .about-image-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
 }
 
 .about-photo {
@@ -78,14 +80,16 @@ body.dark {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 32px;
+  color: var(--black);
 }
 
 .about-paragraph {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
-  color: var(--dark-grey);
+  margin-bottom: 24px;
+  color: var(--black);
+  font-weight: 300;
 }
 
 
@@ -104,11 +108,10 @@ body.dark {
 .about-list li {
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 12px;
   position: relative;
   padding-left: 32px;
   list-style: none;
-
+  color: var(--black);
   
 }
 
@@ -117,8 +120,8 @@ body.dark {
   position: absolute;
   top: 8px;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   background-color: #00b068;
   border-radius: 0;
 }
@@ -128,20 +131,23 @@ body.dark {
 }
 @media screen and (min-width: 768px) {
   .about-me {
-    padding: 0px 32px;
     z-index: 0;
   }
 
   .about-title {
     font-size: 108px;
-    margin-bottom: 60px;
-   
+    max-width: 437px;
+    text-align: left;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+ 
   }
 
   .about-image-text {
     flex-direction: row; 
     align-items: flex-start;
-  
+    gap: 32px;
    margin-bottom: 60px;
  
   }
@@ -211,25 +217,30 @@ body.dark {
   
   
   .about-list li {
+    display: flex; 
+    align-items: flex-start;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.03em;
+    gap: 10px;
     line-height: 1.5;
     margin-bottom: 16px;
-    padding-left: 24px;
+    padding-left: 0;
   }
 
   .about-list li::before {
-    width: 8px;
-    height: 8px;
+    display: inline-block; 
+    position: static; 
+    width: 4px;
+    height: 4px;
     top: 8px; 
     background-color: #00b068;
+    margin-top: 7px; 
   }
 
 }
-@media screen and (min-width: 1293px) {
+@media screen and (min-width: 1280px) {
   .about-me {
-    padding: 0px 32px;
     background-color: var(--white);
     
   }
@@ -254,7 +265,7 @@ body.dark {
   
     justify-content: center;
     gap: 136px;
-    
+    margin: 80px;
     
   }
 
@@ -357,10 +368,12 @@ body.dark {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    gap: 10px;
     max-width: 384px;
     font-weight: 300;
     letter-spacing: 0.03em;
-   
+    display: flex; 
+    align-items: flex-start;
 
    height: auto;
    
@@ -369,12 +382,15 @@ body.dark {
 
   .about-list li::before {
     content: "";
-    position: absolute;
+    /* position: absolute; */
     top: 8px;
     left: 0;
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     background-color: #00b068;
     border-radius: 0;
+  
+    display: inline-block; 
+    position: static; 
   }
 }
