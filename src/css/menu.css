@@ -15,10 +15,11 @@
     flex-direction: column;
     opacity: 1;
     pointer-events: none;
-    transition: right 0.4s ease;
+    transition: right 0.4s ease, pointer-events 0.4s ease;
   }
   
-  .menu.open {
+  /* Відкриття меню через чекбокс */
+  #menu-toggle:checked ~ .menu {
     right: 0;
     pointer-events: auto;
   }
@@ -49,7 +50,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1280px; /* або потрібний розмір */
+    max-width: 1280px;
   }
   
   /* ===== Стилі логотипа ===== */
@@ -80,6 +81,7 @@
     justify-content: center;
   }
   
+  .header--burger-icon,
   .icon-close {
     width: 32px;
     height: 32px;
@@ -115,7 +117,6 @@
     transition: color 0.3s ease, opacity 0.3s ease;
   }
   
-  /* Hover ефект на посилання */
   .menu-list a:hover {
     color: var(--hover);
     opacity: 0.8;
