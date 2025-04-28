@@ -1,212 +1,204 @@
-.faq-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 40px;
+.svg-faq {
+  fill: transparent;
+  stroke: #000;
+}
 
-    margin-top: 80px;
+.faq-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-top: 80px;
 }
 
 .faq-bg {
-    display: none;
-
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .faq-container {
-        gap: 60px;
-
-        max-width: 768px;
-        
-        margin-top: 124px;
-    }
+  .faq-container {
+    gap: 60px;
+    max-width: 768px;
+    margin-top: 124px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .faq-container {
-        flex-direction: column;
-        gap: 0;
-        flex-wrap: wrap;
-        align-content: space-between;
-        
-        
+  .faq-container {
+    flex-direction: column;
+    gap: 0;
+    flex-wrap: wrap;
+    align-content: space-between;
 
-        max-width: 1280px;
-        height: 1020px;
-        margin-top: 164px;
-    }
+    max-width: 1280px;
+    height: 1020px;
+    margin-top: 164px;
+  }
 }
 
 .faq-header {
-    max-width: 320px;
-    height: auto;
+  max-width: 320px;
+  height: auto;
 
-    font-family: "Impact", sans-serif;
-    color: #292929;
+  font-family: "Impact", sans-serif;
+  color: #292929;
 
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #292929;
-
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
 }
 
 .acc-container {
-    /* background-color: blue; */
-    
-    display: flex;
-    /* align-items: flex-start;
-    justify-content: flex-start; */
-    flex-direction: column;
-    gap: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 
-    width: 320px;
-    height: auto;
+  width: 320px;
+  height: auto;
 }
 
 .faq-header-question {
-    color: #00b068;
+  color: #00b068;
 }
 
 @media screen and (min-width: 768px) {
-    .faq-header {
-        max-width: 592px;
+  .faq-header {
+    max-width: 592px;
 
-        font-size: 108px;
-        line-height: 1.15;
-        letter-spacing: 0.02em;
-    }
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
 
-    .acc-container {
-        width: 592px;
-        gap: 10px;
-    }
+  .acc-container {
+    width: 592px;
+    gap: 10px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .faq-header {
-        max-width: 520px;
+  .faq-header {
+    max-width: 520px;
 
-    }
+  }
 
-    .faq-bg {
-        display: block;
-        max-width: 526px;
-        margin-top: 240px;
+  .faq-bg {
+    display: block;
+    max-width: 526px;
+    margin-top: 240px;
 
-    }
+  }
 
-    .acc-container {
-        margin-top: auto;
-        gap: 0px;
-        width: 520px;
-    }
+  .acc-container {
+    margin-top: auto;
+    gap: 0px;
+    width: 520px;
+  }
 }
 
 /* ********************************************************************* */
 .ac {
-    --color-white: #fff;
-    --color-light-grey: #eee;
-    --color-grey: #8a8a8a;
-    --color-black: #111;
-  
-    /* margin-bottom: 8px; */
-    margin: 0px;
-    border: 1px solid var(--color-light-grey);
-    /* background-color: var(--color-white); */
-    background-color: rgba(0, 0, 0, 0);
-    box-sizing: border-box;
-    border-radius: 16px;
-    
-    height: auto;
-    padding: 28px, 24px;
-  
-  }
-  
-  .ac.is-active {
-    background: #bcdfd1;
-  
-  }
-  
-  
-  .ac .ac-header {
-  
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .ac .ac-trigger {
-    position: relative;
-    display: block;
-    width: 100%;
-  
-    font:
-      bold 16px "Arial",
-      sans-serif;
-    color: var(--color-black);
-    text-align: left;
-  
-    padding: 8px 32px 8px 8px;
-  
-    cursor: pointer;
-    background-color: transparent;
-    transition: color 0.25s ease;
-  
-    text-decoration: none;
-    margin: 0;
-    border: 0;
-  }
-  
-  /* .ac .ac-trigger::after {
-      content: "+"; 
-      text-align: center;
-      width: 15px;
-      transform: translate(0, -50%);
-      position: absolute;
-      right: 10px;
-      top: 50%;
-    } */
-  
-  .ac-trigger .icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease;
-    width: 15px;
-    height: 15px;
-  }
-  
-  .ac.is-active .ac-trigger .icon {
-    transform: rotate(180deg);
-  }
-  
-  .ac .ac-trigger:focus {
-    color: var(--color-grey);
-  }
-  
-  .ac .ac-panel {
-    overflow: hidden;
-    transition-property: height, visibility;
-    transition-timing-function: ease;
-  }
-  
-  .ac .ac-panel .ac-text {
-    font:
-      15px/24px "Arial",
-      sans-serif;
-    color: var(--color-black);
-    padding: 8px;
-    margin: 0;
-  }
-  
-  .ac.js-enabled .ac-panel {
-    visibility: hidden;
-  }
-  
-  .ac.is-active .ac-panel {
-    visibility: visible;
-  }
+  --color-white: #fff;
+  --color-light-grey: #eee;
+  --color-grey: #8a8a8a;
+  --color-black: #292929;
+
+  /* margin-bottom: 8px; */
+  margin: 0px;
+  border: 1px solid var(--color-light-grey);
+  /* background-color: var(--color-white); */
+  background-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 16px;
+
+  height: auto;
+  padding: 28px, 24px;
+
+}
+
+.ac.is-active {
+  background: #bcdfd1;
+
+}
+
+
+.ac .ac-header {
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.ac .ac-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-black);
+  text-align: left;
+
+  padding: 8px 32px 8px 8px;
+
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.25s ease;
+
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+}
+
+
+.ac-trigger .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  width: 15px;
+  height: 15px;
+}
+
+.ac.is-active .ac-trigger .icon {
+  transform: translateX(100%) rotate(180deg);
+}
+
+.ac .ac-trigger:focus {
+  color: var(--color-black);
+}
+
+.ac .ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.ac .ac-panel .ac-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--color-black);
+  padding: 8px;
+  margin: 0;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
