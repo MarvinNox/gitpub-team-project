@@ -80,14 +80,19 @@ const batchSize = 3;
 
 function createGallery(projects) {
   const markup = projects
-    .map(({ src1x, src2x, src, alt, h3 }) => {
+    .map(({ src1x, src2x, src, alt }) => {
       return `
       <li>
   <a href="${src}" class="gallery-link">
-    <img class="image-my-project" srcset="${BASE_URL}${src1x} 1x, ${BASE_URL}${src2x} 2x" src="${BASE_URL}${src}" alt="${alt}" />
+    <img data-aos="flip-up" data-aos-duration="500" data-aos-easing="linear"
+    class="image-my-project" srcset="${BASE_URL}${src1x} 1x, ${BASE_URL}${src2x} 2x" src="${BASE_URL}${src}" alt="${alt}" />
   </a>
     <p class="text-my-project">React, JavaScript, Node JS, Git</p>
-      <div class="div-my-project">
+      <div class="div-my-project" 
+      data-aos="fade-up" 
+      data-aos-anchor-placement="bottom-bottom"
+      data-aos-easing="linear"
+      data-aos-duration="500">
     <h3 class="names-my-project">${alt}</h3>
     <button class="button-my-project" onclick="window.open('https://github.com/Marakasss/gitpub-team-project', '_blank')">
       <span class="visit-my-project">VISIT</span>
