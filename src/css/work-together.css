@@ -185,7 +185,7 @@
   letter-spacing: 0.04em;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
   color: light-dark(var(--black), var(--white-dt));
   padding: 16px;
   background-color: light-dark(var(--light-grey), var(--charcoal-dt));
