@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Menu</title>
+
+  <!-- 🌱 Підключення базових стилів -->
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/menu.css" />
+  
+  <!-- 📚 Підключення шрифтів -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ☰ Бургер + Чекбокс -->
+  <input type="checkbox" id="menu-toggle" hidden>
+
+  <label for="menu-toggle" class="menu-icon">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </label>
+
+  <nav class="menu">
+    <div class="menu-inner">
+    
+      <div class="menu-top container">
+        <a href="./index.html" class="logo">LLOYD<span>JEFFERSON.</span></a>
+        <button class="close-btn" aria-label="Close menu button">
+          <svg class="icon-close" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 8L24 24M8 24L24 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    
+      <ul class="menu-list">
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#my-projects">Projects</a></li>
+        <li><a href="#work-together">Contacts</a></li>
+      </ul>
+    
+      <button class="order-btn">ORDER THE PROJECT</button>
+    
+    </div>
+  </nav>
+
+</body>
+</html>
