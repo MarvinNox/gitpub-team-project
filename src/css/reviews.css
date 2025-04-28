@@ -54,16 +54,6 @@ body {
   }
 }
 
-/*.swiper-wrapper {*/
-/*  display: flex;*/
-/*  align-items: stretch;*/
-/*}*/
-/*.swiper-slide {*/
-/*  height: 100%;*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*}*/
-
 .reviews {
   text-align: center;
 }
@@ -137,6 +127,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .reviews-button:hover {
