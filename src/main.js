@@ -4,6 +4,7 @@ import { loadNextProjects } from './js/my-projects';
 import { initWorkTogeter } from './js/work-together';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './js/reviews.js'
 
 AOS.init();
 
