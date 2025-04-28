@@ -1,0 +1,307 @@
+.work-together-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  @media only screen and (min-width: 768px) {
+    gap: 60px;
+  }
+  @media only screen and (min-width: 1280px) {
+    gap: 80px;
+  }
+}
+
+.work-together-contacts-paragraph-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @media only screen and (min-width: 1280px) {
+    gap: 120px;
+  }
+}
+
+.work-together-contacts-paragraph-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 1;
+  @media only screen and (min-width: 768px) {
+    gap: 60px;
+  }
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.work-together-h2 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
+  transition: font-size 1s ease;
+  @media only screen and (min-width: 768px) {
+    font-size: 108px;
+    line-height: 1.14;
+  }
+}
+
+.work-together-lets {
+  color: light-dark(var(--black), var(--white-dt));
+}
+
+.work-together-caption {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: light-dark(var(--black), var(--white-dt));
+  text-transform: uppercase;
+  transition: font-size 1s ease;
+  @media only screen and (min-width: 768px) {
+    font-size: 20px;
+    max-width: 488px;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media only screen and (min-width: 1280px) {
+    flex-direction: column;
+  }
+}
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: light-dark(var(--black), var(--white-dt));
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.contact-icon {
+  width: 24px;
+  height: 24px;
+}
+.contact {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
+  }
+}
+.work-together-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  transition: width 1s ease, max-width 1s ease;
+  @media only screen and (min-width: 768px) {
+    max-width: 704px;
+  }
+  @media only screen and (min-width: 1280px) {
+    max-width: 592px;
+  }
+}
+
+.work-together-input-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.success-icon {
+  display: none;
+  position: absolute;
+  right: 17px;
+  top: 27px;
+  width: 14px;
+  height: 14px;
+}
+
+.validation-text {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--error);
+  margin-top: 4px;
+  position: relative;
+  &:after {
+    position: absolute;
+  }
+}
+
+.work-together-input {
+  height: 40px;
+  position: relative;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-family: var(--font-family);
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: light-dark(var(--light-grey), var(--charcoal-dt));
+  border: 0;
+  outline: 0;
+  padding-right: 17px;
+  &::placeholder {
+    color: light-dark(var(--black), rgba(240, 240, 240, 0.4));
+  }
+  &:not(:placeholder-shown):invalid {
+    color: var(--error);
+  }
+  &:not(:placeholder-shown):invalid + svg + p:after {
+    content: 'Invalid email, try again';
+  }
+  &:valid {
+    color: light-dark(var(--black), var(--white-dt));
+  }
+  &:valid + svg {
+    display: block;
+  }
+}
+
+.work-together-text-area {
+  resize: none;
+  height: 128px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  letter-spacing: 0.04em;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: light-dark(var(--black), var(--white-dt));
+  padding: 16px;
+  background-color: light-dark(var(--light-grey), var(--charcoal-dt));
+  border: 0;
+  outline: 0;
+  &::placeholder {
+    color: light-dark(var(--black), rgba(240, 240, 240, 0.4));
+  }
+}
+.work-together-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 320px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background-color: light-dark(var(--accet-green), var(--accet-green-dt));
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: light-dark(var(--white), var(--white-dt));
+  white-space: nowrap;
+  text-transform: capitalize;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media only screen and (min-width: 768px) {
+    min-width: 173px;
+    align-self: flex-start;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--hover);
+  }
+}
+
+.work-together-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* ------------------Modal---------------------- */
+.work-together-modal.is-open {
+  display: block;
+}
+.work-together-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 99;
+  background-color: light-dark(rgba(41, 41, 41, 0.8), rgba(30, 32, 35, 0.8));
+}
+.work-together-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: light-dark(var(--white), var(--charcoal-dt));
+  border-radius: 16px;
+  padding: 48px 32px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  @media only screen and (min-width: 768px) {
+    padding: 64px;
+    width: 492px;
+  }
+}
+.work-together-modal-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
+}
+.work-together-modal-close-icon {
+  display: block;
+  stroke: light-dark(var(--black), var(--white));
+  stroke-width: 2px;
+  width: 24px;
+  height: 24px;
+}
+.work-together-modal-caption {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
+}
+.work-together-modal-paragraph {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: light-dark(var(--black), var(--white-dt));
+  margin-top: 16px;
+}
+.no-scroll {
+  overflow: hidden;
+}

@@ -29,8 +29,8 @@
   color: light-dark(var(--black), var(--white-dt));
   transition: all 200ms ease-in-out;
 
-  @media screen and (width < 320px) {
-    font-size: clamp(48px, 5vh, 64px);
+  @media screen and (width < 360px) {
+    font-size: 58px;
     overflow-wrap: anywhere;
     white-space: normal;
   }
