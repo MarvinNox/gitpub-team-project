@@ -1,5 +1,3 @@
-
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -7,7 +5,6 @@
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -22,22 +19,38 @@
     background: light-dark(var(--light-accent), var(--dark-accet-dt));
     white-space: nowrap;
     position: relative;
-
-    &:hover .skills  {
-            animation-play-state: paused;
-        }
+    z-index: 999;
 }
 
- .skills-outer {
+.skills-outer {
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.skills-track {
+    display: flex;
+    width: 200%;
+    gap: 56px;
+    animation: marquee 100s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+.reverse-track {
+    animation: marquee-revers 120s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 .skills {
     display: inline-flex;
     gap: 56px;
+    position: relative;
     white-space: nowrap;
-    animation: marquee 25s linear infinite;
 }
 
 .skills span {
@@ -52,11 +65,11 @@
     white-space: nowrap;
 
     &:hover {
-        cursor: pointer;
-        color: light-dark(var(--accet-green), var(--accet-green-dt)); 
+        color: light-dark(var(--accet-green), var(--accet-green-dt));
     }
 }
 
+.skills::after,
 .skills span:not(:last-child)::after {
     content: "";
     display: inline-block;
@@ -71,6 +84,7 @@
     transform: translate(0, -50%);
 }
 
+.skills.reverse::after,
 .skills.reverse span:not(:last-child)::after {
     background: light-dark(var(--black), var(--white));
 }
@@ -80,22 +94,20 @@
     transform: rotate(2deg);
 }
 
-.skills.reverse {
-    animation: marquee-revers 40s linear infinite;
-}
+
 
 .skills.reverse span {
     color: light-dark(var(--accet-green), var(--accet-green-dt));
 
     &:hover {
-            color: var(--black), var(--hover-grey);
-        }
+        color: light-dark(var(--black), var(--hover-grey));
+    }
 }
 
 
 
 @media screen and (min-width: 768px) {
-   
+
     .skills span {
         font-size: 36px;
         line-height: 1.33;
