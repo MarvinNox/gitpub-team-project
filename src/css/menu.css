@@ -1,5 +1,4 @@
-/* ===== Базові стилі меню ===== */
-.menu {
+  .menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -16,14 +15,12 @@
     pointer-events: none;
     transition: right 0.4s ease, pointer-events 0.4s ease;
   }
-  
-  /* Відкриття меню через клас .open */
+
   .menu.open {
     right: 0;
     pointer-events: auto;
   }
-  
-  /* ===== Внутрішній контейнер меню ===== */
+
   .menu-inner {
     height: 100%;
     width: 100%;
@@ -32,8 +29,7 @@
     justify-content: space-between;
     padding: 0;
   }
-  
-  /* ===== Верхня панель меню: Лого + Хрестик ===== */
+
   .menu-top {
     display: flex;
     align-items: center;
@@ -48,8 +44,7 @@
     width: 100%;
     max-width: 1280px;
   }
-  
-  /* ===== Стилі логотипа ===== */
+
   .logo {
     font-family: 'Impact', sans-serif;
     font-weight: 400;
@@ -64,8 +59,7 @@
   .logo span {
     color: var(--accet-green);
   }
-  
-  /* ===== Кнопка закриття меню (хрестик) ===== */
+
   .close-btn {
     width: 32px;
     height: 32px;
@@ -80,15 +74,14 @@
   .icon-close {
     width: 32px;
     height: 32px;
-    color: var(--black);
+    stroke: var(--black);
     transition: color 0.3s ease, opacity 0.3s ease;
   }
   
   .close-btn:hover .icon-close {
     opacity: 0.7;
   }
-  
-  /* ===== Меню-контейнер ===== */
+
   .menu-list {
     list-style: none;
     padding: 0;
@@ -116,8 +109,7 @@
     color: var(--hover);
     opacity: 0.8;
   }
-  
-  /* ===== Кнопка ORDER ===== */
+
   .order-btn {
     padding: 16px 40px;
     background-color: var(--accet-green);
@@ -135,15 +127,13 @@
   .order-btn:hover {
     background-color: var(--hover-green-dt);
   }
-  
-  /* ===== Адаптив на мобілках ===== */
+
   @media screen and (max-width: 767px) {
     .order-btn {
       display: none;
     }
   }
-  
-  /* ===== Темна тема ===== */
+
   body.dark .menu {
     background-color: var(--black-dt);
     color: var(--white-dt);
@@ -168,8 +158,7 @@
   body.dark .logo span {
     color: var(--accet-green-dt);
   }
-  
-  /* ===== Світла тема ===== */
+
   body:not(.dark) .menu {
     background-color: var(--white);
     color: var(--black);

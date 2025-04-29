@@ -5,7 +5,7 @@ import { loadNextProjects } from './js/my-projects';
 import { initWorkTogeter } from './js/work-together';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './js/reviews.js'
+import './js/reviews.js';
 
 AOS.init();
 
@@ -15,7 +15,8 @@ refs.themeToggler.addEventListener('change', toggleSwitcher);
 window.addEventListener('scroll', scrollUpBtnShow);
 refsScroll.scrollBtn.addEventListener('click', scrollUp);
 
-// Загрузка первых 3-х проектов при старте страницы (без скролла) в секции my-project
 loadNextProjects(false);
 
 initWorkTogeter();
+
+initMenu();
