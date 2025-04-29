@@ -1,7 +1,4 @@
 import Accordion from "accordion-js";
-import { detectTheme, refs, toggleSwitcher } from "./js/theme-switcher";
-import { refsScroll, scrollUpBtnShow, scrollUp } from "./js/scroll-up";
-import {loadNextProjects} from './js/my-projects';
 
 
 import { initMenu } from './js/menu.js';
