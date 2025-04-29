@@ -1,25 +1,32 @@
-<!-- Деякі загальні домовленості щоб усе це мало хоч трохи чистий вигляд.
-
-1. Класи називаємо у кебаб стилі типу header-title, card-wrapper, star-wars, тощо...
-2. Вказуючи ID для якірних посилань називаємо їх ідентично до своєї секції.
-3. У JS оголошуємо функції Function Declaration, уникаємо стрілок і Expression (але якщо вже дуже хочеться - то що вже)) )
-
-function sum(a, b) {
-      return a + b;
-    }
-                                                    
-4. Також у JS залишаємо хоча б мінімальні коментарі
-5. Класи section, container, задають мінімальний базовий скелет сторінки
-якщо захочеться до них щось додати подумай три рази
-6. Щоб глянути яку назву яка іконка має у спрайті залишу скрін у папці img (sprite.jpg) -->
-
 <section class="about-me section" id="about-me">
   <div class="container">
-    <h2 class="about-title">About <span class="highlight">Me</span></h2>
+    <h2
+      class="about-title"
+      data-aos="fade-bottom"
+      data-aos-anchor-placement="bottom-bottom"
+      data-aos-easing="linear"
+      data-aos-duration="600"
+    >
+      About <span class="highlight">Me</span>
+    </h2>
 
     <div class="about-image-text">
-      <img src="img/about-me/about-me.png" alt="man" class="about-photo" />
-      <div class="about-text">
+      <img
+        src="img/about-me/about-me.png"
+        alt="man"
+        class="about-photo"
+        data-aos="fade-right"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-easing="linear"
+        data-aos-duration="600"
+      />
+      <div
+        class="about-text"
+        data-aos="fade-left"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-easing="linear"
+        data-aos-duration="600"
+      >
         <div class="about-decor">
           <img src="img/about-me/decor-bg-2.png" alt="Decor background" />
         </div>
@@ -44,12 +51,13 @@ function sum(a, b) {
       </div>
     </div>
 
-    <!-- Декор -->
-    <!-- <div class="about-decor">
-      <img src="img/about-me/decor-bg-2.png"  alt="Decor background">
-    </div> -->
-
-    <div class="columns">
+    <div
+      class="columns"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-bottom"
+      data-aos-easing="linear"
+      data-aos-duration="600"
+    >
       <div class="about-column">
         <h3 class="about-subtitle">EDUCATION</h3>
         <ul class="about-list">

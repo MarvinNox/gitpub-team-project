@@ -4,10 +4,6 @@ body {
       color: var(--white);
     }
 
-    .footer-soc-item {
-      color: var(--white);
-    }
-
     .footer-text {
       color: var(--white);
     }
@@ -46,8 +42,14 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--black);
+  color: light-dark(var(--black), var(--white));
   margin-top: 24px;
+
+  transition: color 300ms ease-in;
+  &:hover,
+  &:focus-within {
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
+  }
 }
 
 .footer-text {

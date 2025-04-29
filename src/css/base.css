@@ -16,7 +16,6 @@
   --dark-accet-dt: #204136;
   --hover-green-dt: #009156;
   --error: #e74a3b;
-
   /* Fonts custom properties */
 
   --font-family: 'Poppins', sans-serif;
@@ -32,6 +31,7 @@ body {
 
   &.dark {
     color-scheme: dark;
+    --color3: var(--dark-accet-dt);
   }
 }
 
