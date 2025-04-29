@@ -1,0 +1,221 @@
+
+.ac:has(+ .is-active) {
+  border-bottom: none;
+}
+.ac.is-active {
+  border-radius: 16px;
+  border: none;
+}
+
+.svg-faq {
+  fill: transparent;
+  stroke: light-dark(var(--black), var(--white));;
+}
+
+.faq-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-top: 80px;
+}
+
+.faq-bg {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-container {
+    gap: 60px;
+    max-width: 768px;
+    margin-top: 124px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .faq-container {
+      flex-direction: row;
+      gap: 104px;
+      flex-wrap: nowrap;
+      max-width: 1280px;
+      margin-top: 164px;
+      position: relative;
+    }
+}
+
+.faq-header {
+  max-width: 320px;
+  height: auto;
+
+  font-family: "Impact", sans-serif;
+  color: light-dark(var(--black), var(--white));
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.acc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+  
+  height: auto;
+}
+
+.faq-header-question {
+  color: light-dark(var(--accet-green), var(--accet-green-dt));
+}
+
+@media screen and (min-width: 768px) {
+  .faq-header {
+    max-width: 592px;
+
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+
+  .acc-container {
+    
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .faq-header {
+    max-width: 520px;
+
+  }
+
+  .faq-bg {
+    display: block;
+    max-width: 526px;
+    margin-top: 240px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .acc-container {
+    margin-top: 276px;
+    gap: 0px;
+    max-width: 592px;
+    
+  }
+}
+
+/* ********************************************************************* */
+.ac {
+  margin: 0px;
+  border: none;
+   
+  background-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  
+border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
+  height: auto;
+  padding: 28px 24px;
+
+}
+
+.ac.is-active {
+  background-color: light-dark(var(--light-accent), var(--dark-accet-dt));;
+
+}
+
+
+.ac .ac-header {
+  font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .ac .ac-header {
+    font-size: 20px;
+    line-height: 1.6;
+
+  }
+}
+
+
+
+.ac .ac-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: light-dark(var(--black), var(--white));
+  text-align: left;
+
+  padding: 0 26px 24px 0;
+
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.25s ease;
+
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+}
+
+
+.ac-trigger .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  width: 15px;
+  height: 15px;
+}
+
+.ac.is-active .ac-trigger .icon {
+  transform: translateX(100%) rotate(180deg);
+}
+
+.ac .ac-trigger:focus {
+  color: light-dark(var(--black), var(--white));
+}
+
+.ac .ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.ac .ac-panel .ac-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: light-dark(var(--black), var(--white));
+  margin: 0;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
