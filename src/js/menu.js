@@ -6,7 +6,7 @@ const closeBtn = document.querySelector('.close-btn');
 const sectionLinks = document.querySelectorAll('.menu-list > li');
 
 export function initMenu() {
-  if (!burgerBtn || !menu || !closeBtn) return;
+  
 
   burgerBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
@@ -33,21 +33,27 @@ function closeMenu() {
 function initSwipeMenu(menu) {
       let touchStartX = null;
       let touchEndX = null;
+      let touchStartY = null; 
+      let touchEndY = null;
+      const swipeThreshold = 50;
+      const maxVerticalMove = 30;
   
       // Свайп на документі для відкриття меню
       document.addEventListener('touchstart', (e) => {
         if (menu.classList.contains('open')) return;
         touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
       }, false);
   
       document.addEventListener('touchend', (e) => {
         if (menu.classList.contains('open')) return;
         touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
   
         if (touchStartX === null || touchEndX === null) return;
   
         const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
+        
   
         if (swipeDistance > swipeThreshold) {
           openMenu();
@@ -61,18 +67,20 @@ function initSwipeMenu(menu) {
       menu.addEventListener('touchstart', (e) => {
         if (!menu.classList.contains('open')) return;
         touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
       }, false);
   
       menu.addEventListener('touchend', (e) => {
         if (!menu.classList.contains('open')) return;
         touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
   
         if (touchStartX === null || touchEndX === null) return;
   
         const swipeDistance = touchStartX - touchEndX;
-        const swipeThreshold = 50;
+        const verticalDistance = Math.abs(touchStartY - touchEndY);
   
-        if (swipeDistance < -swipeThreshold) {
+        if (swipeDistance < -swipeThreshold && verticalDistance < maxVerticalMove) {
           closeMenu();
         }
   
