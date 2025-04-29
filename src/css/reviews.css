@@ -17,11 +17,12 @@ body {
     }
 
     .reviews-button {
-      border: 1px solid var(--charcoal-dt);
+      border: 1px solid var(--white-dt);
       background: transparent;
     }
 
     .reviews-button:hover {
+      border: 1px solid var(--white-dt);
       background: var(--charcoal-dt);
     }
 
@@ -156,6 +157,8 @@ body {
 .reviews-arrow {
   fill: transparent;
   stroke: var(--black);
+  height: 42px;
+  width: 42px;
 }
 
 .reviews-button-disabled .reviews-arrow {
