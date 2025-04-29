@@ -1,24 +1,25 @@
 // src/js/menu.js
 
-// Визначаємо DOM-елементи на самому початку
-const burgerBtn = document.querySelector('.header--open-menu');
+const burgerBtn = document.querySelector('.menu-icon');
 const menu = document.querySelector('.menu');
 const closeBtn = document.querySelector('.close-btn');
+const sectionLinks = document.querySelectorAll('.menu-list > li');
 
 export function initMenu() {
   if (!burgerBtn || !menu || !closeBtn) return;
 
-  // Клік на бургер
-  burgerBtn.addEventListener('click', () => {
-    openMenu();
+  // Відкриття меню
+  burgerBtn.addEventListener('click', openMenu);
+
+  // Закриття меню (хрестик)
+  closeBtn.addEventListener('click', closeMenu);
+
+  // Закриття меню при кліку на пункт
+  sectionLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 
-  // Клік на хрестик
-  closeBtn.addEventListener('click', () => {
-    closeMenu();
-  });
-
-  // Ініціалізація свайпів на мобілках
+  // Свайпи для мобільних
   if (window.innerWidth <= 768) {
     initSwipeMenu(menu);
   }
@@ -26,57 +27,58 @@ export function initMenu() {
 
 function openMenu() {
   menu.classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   menu.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-function initSwipeMenu(menu) {
+function initSwipeMenu(menuElement) {
   let touchStartX = null;
   let touchEndX = null;
+  const swipeThreshold = 50;
 
+  // Свайп справа наліво — відкрити
   document.addEventListener('touchstart', (e) => {
-    if (menu.classList.contains('open')) return;
+    if (menuElement.classList.contains('open')) return;
     touchStartX = e.changedTouches[0].screenX;
-  }, false);
+  });
 
   document.addEventListener('touchend', (e) => {
-    if (menu.classList.contains('open')) return;
+    if (menuElement.classList.contains('open')) return;
     touchEndX = e.changedTouches[0].screenX;
 
-    if (touchStartX === null || touchEndX === null) return;
-
-    const swipeDistance = touchStartX - touchEndX;
-    const swipeThreshold = 50;
-
-    if (swipeDistance > swipeThreshold) {
-      openMenu();
+    if (touchStartX !== null && touchEndX !== null) {
+      const swipeDistance = touchStartX - touchEndX;
+      if (swipeDistance > swipeThreshold) {
+        openMenu();
+      }
     }
 
     touchStartX = null;
     touchEndX = null;
-  }, false);
+  });
 
-  menu.addEventListener('touchstart', (e) => {
-    if (!menu.classList.contains('open')) return;
+  // Свайп зліва направо — закрити
+  menuElement.addEventListener('touchstart', (e) => {
+    if (!menuElement.classList.contains('open')) return;
     touchStartX = e.changedTouches[0].screenX;
-  }, false);
+  });
 
-  menu.addEventListener('touchend', (e) => {
-    if (!menu.classList.contains('open')) return;
+  menuElement.addEventListener('touchend', (e) => {
+    if (!menuElement.classList.contains('open')) return;
     touchEndX = e.changedTouches[0].screenX;
 
-    if (touchStartX === null || touchEndX === null) return;
-
-    const swipeDistance = touchStartX - touchEndX;
-    const swipeThreshold = 50;
-
-    if (swipeDistance < -swipeThreshold) {
-      closeMenu();
+    if (touchStartX !== null && touchEndX !== null) {
+      const swipeDistance = touchStartX - touchEndX;
+      if (swipeDistance < -swipeThreshold) {
+        closeMenu();
+      }
     }
 
     touchStartX = null;
     touchEndX = null;
-  }, false);
+  });
 }

@@ -13,13 +13,12 @@
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    opacity: 1;
     pointer-events: none;
     transition: right 0.4s ease, pointer-events 0.4s ease;
   }
   
-  /* Відкриття меню через чекбокс */
-  #menu-toggle:checked ~ .menu {
+  /* Відкриття меню через клас .open */
+  .menu.open {
     right: 0;
     pointer-events: auto;
   }
@@ -39,16 +38,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
   }
   
-  /* ===== Клас container ===== */
   .container {
     padding-left: 20px;
     padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 1280px;
   }
@@ -69,7 +65,7 @@
     color: var(--accet-green);
   }
   
-  /* ===== Кнопка закриття (SVG) ===== */
+  /* ===== Кнопка закриття меню (хрестик) ===== */
   .close-btn {
     width: 32px;
     height: 32px;
@@ -81,19 +77,18 @@
     justify-content: center;
   }
   
-  .header--burger-icon,
   .icon-close {
     width: 32px;
     height: 32px;
+    color: var(--black);
     transition: color 0.3s ease, opacity 0.3s ease;
   }
   
-  /* Hover ефект на хрестик */
   .close-btn:hover .icon-close {
     opacity: 0.7;
   }
   
-  /* ===== Навігація меню ===== */
+  /* ===== Меню-контейнер ===== */
   .menu-list {
     list-style: none;
     padding: 0;
@@ -143,12 +138,6 @@
   
   /* ===== Адаптив на мобілках ===== */
   @media screen and (max-width: 767px) {
-    .menu {
-      display: flex;
-      right: -100%;
-      transition: right 0.4s ease;
-    }
-  
     .order-btn {
       display: none;
     }
@@ -170,7 +159,6 @@
   
   body.dark .menu-list a:hover {
     color: var(--hover-green-dt);
-    opacity: 0.8;
   }
   
   body.dark .logo {
@@ -197,7 +185,6 @@
   
   body:not(.dark) .menu-list a:hover {
     color: var(--hover);
-    opacity: 0.8;
   }
   
   body:not(.dark) .logo {

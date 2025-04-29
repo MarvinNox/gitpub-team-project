@@ -8,41 +8,40 @@
   <!-- 🌱 Підключення базових стилів -->
   <link rel="stylesheet" href="/src/css/base.css" />
   <link rel="stylesheet" href="/src/css/menu.css" />
-  
+
   <!-- 📚 Підключення шрифтів -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ☰ Бургер + Чекбокс -->
-  <input type="checkbox" id="menu-toggle" hidden>
+  <!-- ☰ Бургер-кнопка -->
+  <button class="menu-icon" aria-label="Open menu">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </button>
 
-  <label for="menu-toggle" class="menu-icon">
-    <span class="hamburger"></span>
-    <span class="hamburger"></span>
-    <span class="hamburger"></span>
-  </label>
-
+  <!-- Навігаційне меню -->
   <nav class="menu">
     <div class="menu-inner">
       <div class="menu-top container">
         <a href="./index.html" class="logo">LLOYD<span>JEFFERSON.</span></a>
-        <button class="close-btn" aria-label="Close menu button">
-          <svg class="header--burger-icon" width="32" height="32">
-            <use href="img/sprite.svg#icon-close-btn"></use>
+        <button class="close-btn" aria-label="Close menu">
+          <svg class="icon-close" width="32" height="32">
+            <use href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
-  
+
       <ul class="menu-list">
         <li><a href="#about-me">About me</a></li>
         <li><a href="#my-projects">Projects</a></li>
         <li><a href="#work-together">Contacts</a></li>
       </ul>
-  
+
       <button class="order-btn">ORDER THE PROJECT</button>
     </div>
   </nav>
-
+  
 </body>
 </html>
