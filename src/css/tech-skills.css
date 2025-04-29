@@ -1,0 +1,121 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.skills-wraper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 32px 0;
+    background: light-dark(var(--light-accent), var(--dark-accet-dt));
+    white-space: nowrap;
+    position: relative;
+    z-index: 999;
+}
+
+.skills-outer {
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.skills-track {
+    display: flex;
+    width: 200%;
+    gap: 56px;
+    animation: marquee 100s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+.reverse-track {
+    animation: marquee-revers 120s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+.skills {
+    display: inline-flex;
+    gap: 56px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.skills span {
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: light-dark(var(--black), var(--white));
+    white-space: nowrap;
+
+    &:hover {
+        color: light-dark(var(--accet-green), var(--accet-green-dt));
+    }
+}
+
+.skills::after,
+.skills span:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: light-dark(var(--accet-green), var(--accet-green-dt));
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 24px;
+    transform: translate(0, -50%);
+}
+
+.skills.reverse::after,
+.skills.reverse span:not(:last-child)::after {
+    background: light-dark(var(--black), var(--white));
+}
+
+.skills-wraper.rotated {
+    background-color: light-dark(var(--light-grey), var(--charcoal-dt));
+    transform: rotate(2deg);
+}
+
+
+
+.skills.reverse span {
+    color: light-dark(var(--accet-green), var(--accet-green-dt));
+
+    &:hover {
+        color: light-dark(var(--black), var(--hover-grey));
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .skills span {
+        font-size: 36px;
+        line-height: 1.33;
+        letter-spacing: 0.01em;
+    }
+
+    .skills-wraper {
+        padding: 40px 0;
+    }
+
+}
