@@ -61,7 +61,7 @@ body.dark {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .about-photo {
@@ -79,12 +79,16 @@ body.dark {
 .about-subtitle {
   font-size: 32px;
   font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   margin-bottom: 32px;
   color: var(--black);
 }
 
 .about-paragraph {
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.03em;
   margin-bottom: 24px;
@@ -106,24 +110,28 @@ body.dark {
 
 
 .about-list li {
+  display: flex;
+  align-items: flex-start;
   font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  gap: 18px;
   line-height: 1.5;
-  position: relative;
-  padding-left: 32px;
-  list-style: none;
-  color: var(--black);
-  
+  margin-bottom: 12px;
+}
+
+.about-list li:last-child {
+  margin-bottom: 0;
 }
 
 .about-list li::before {
   content: "";
-  position: absolute;
-  top: 8px;
-  left: 0;
+  display: inline-block;
   width: 4px;
   height: 4px;
   background-color: #00b068;
-  border-radius: 0;
+  margin-top: 0.6em;
+  flex-shrink: 0;
 }
 
 .about-decor {
@@ -141,6 +149,7 @@ body.dark {
     line-height: 1.1;
     font-weight: 400;
     letter-spacing: 0.02em;
+    margin-bottom: 0;
  
   }
 
@@ -178,12 +187,14 @@ body.dark {
   }
 
   .about-paragraph {
-   font-weight: 300;
+   
     font-size: 16px;
     letter-spacing: 0.03em;
-  
-
   }
+
+    .about-list li {
+      margin-bottom: 16px;
+    }
 
   .columns {
     flex-direction: row; 
@@ -213,30 +224,7 @@ body.dark {
     height: auto;
   }
   
-  
-  
-  
-  .about-list li {
-    display: flex; 
-    align-items: flex-start;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    gap: 10px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    padding-left: 0;
-  }
 
-  .about-list li::before {
-    display: inline-block; 
-    position: static; 
-    width: 4px;
-    height: 4px;
-    top: 8px; 
-    background-color: #00b068;
-    margin-top: 7px; 
-  }
 
 }
 @media screen and (min-width: 1280px) {
@@ -361,36 +349,7 @@ body.dark {
   .about-list {
     list-style: none;
     padding-left: 0;
-    
   }
 
-  .about-list li {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    gap: 10px;
-    max-width: 384px;
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    display: flex; 
-    align-items: flex-start;
-
-   height: auto;
-   
-    position: relative;
-  }
-
-  .about-list li::before {
-    content: "";
-    /* position: absolute; */
-    top: 8px;
-    left: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #00b068;
-    border-radius: 0;
   
-    display: inline-block; 
-    position: static; 
-  }
 }
