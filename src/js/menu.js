@@ -30,31 +30,53 @@ function closeMenu() {
   document.body.classList.remove('menu-open'); // прибираємо блокування скролу
 }
 
-function initSwipeMenu(menuElement) {
-  let touchStartX = null;
-  let touchEndX = null;
-  const swipeThreshold = 50;
-
-  document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  document.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-
-    if (touchStartX !== null && touchEndX !== null) {
-      const swipeDistance = touchStartX - touchEndX;
-
-      if (!menuElement.classList.contains('open') && swipeDistance > swipeThreshold) {
-        openMenu();
-      }
-
-      if (menuElement.classList.contains('open') && swipeDistance < -swipeThreshold) {
-        closeMenu();
-      }
+function initSwipeMenu(menu) {
+      let touchStartX = null;
+      let touchEndX = null;
+  
+      // Свайп на документі для відкриття меню
+      document.addEventListener('touchstart', (e) => {
+        if (menu.classList.contains('open')) return;
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+  
+      document.addEventListener('touchend', (e) => {
+        if (menu.classList.contains('open')) return;
+        touchEndX = e.changedTouches[0].screenX;
+  
+        if (touchStartX === null || touchEndX === null) return;
+  
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+  
+        if (swipeDistance > swipeThreshold) {
+          openMenu();
+        }
+  
+        touchStartX = null;
+        touchEndX = null;
+      }, false);
+  
+      // Свайп на самому меню для закриття меню
+      menu.addEventListener('touchstart', (e) => {
+        if (!menu.classList.contains('open')) return;
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+  
+      menu.addEventListener('touchend', (e) => {
+        if (!menu.classList.contains('open')) return;
+        touchEndX = e.changedTouches[0].screenX;
+  
+        if (touchStartX === null || touchEndX === null) return;
+  
+        const swipeDistance = touchStartX - touchEndX;
+        const swipeThreshold = 50;
+  
+        if (swipeDistance < -swipeThreshold) {
+          closeMenu();
+        }
+  
+        touchStartX = null;
+        touchEndX = null;
+      }, false);
     }
-
-    touchStartX = null;
-    touchEndX = null;
-  });
-}
