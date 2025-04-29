@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio 2.0</title>
     <script type="module" crossorigin src="/gitpub-team-project/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/gitpub-team-project/assets/vendor-BDt1dWUS.js">
-    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/vendor-D0TPUbZ4.css">
-    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-Bsv3Zmhg.css">
+    <link rel="modulepreload" crossorigin href="/gitpub-team-project/assets/vendor-Cp5DvIfW.js">
+    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/vendor-B6QWi432.css">
+    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-m_beJ9yt.css">
   </head>
   <body>
     <header class="header">
@@ -361,24 +361,124 @@ function sum(a, b) {
   </div>
 </section>
 
-      <!-- Деякі загальні домовленості щоб усе це мало хоч трохи чистий вигляд.
+      <section class="section" id="faq">
+  <div class="container faq-container">
+    <h2 class="faq-header">
+      frequently asked <span class="faq-header-question">question</span>
+    </h2>
 
-1. Класи називаємо у кебаб стилі типу header-title, card-wrapper, star-wars, тощо...
-2. Вказуючи ID для якірних посилань називаємо їх ідентично до своєї секції.
-3. У JS оголошуємо функції Function Declaration, уникаємо стрілок і Expression (але якщо вже дуже хочеться - то що вже)) )
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgoAAAGXCAYAAADS0XhVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAboSURBVHgB7d3BbRtnGsfh/3CFXWH3EJbArWCdCpZ73oM9HeRm5mS7gsQVhDkEEpCD1QGtCqwSlA6YDuaoILAnIycXh3oTUSKDkfg8gD5Q8/IgQBzyB2E+TRNgXM6fv0jfPMu2+uY87ckyADt0FGBc+uZuH/ZNngyrUAB2ahLgkeinAdgxoQAAlIQCAFASCgBASSgAACWhAACUhAIAUBIKAEBJKAAAJaEAAJSEAgBQEgoAQEkowPisczcXAdixJsD4rBbzbOV9l/xrnXbZBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAD0gTgUKwWszT9N8Nb33Rj1r9/lfb7ywCfOArAoWjyZljmNw8nXw/LswCfmASAoR+azwJsEAoAQEkoAAAloQAAlIQCcECaLsBW7HoADkffv0qT6Q2DLv2H1wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYKSaAPd3vvgqfeYbx5tc5Onp6wA8UEIB7mu1mA9n0rty3r//PO33lwF4gCYB9uxv0wA8UEIBACgJBQCgJBQAgJJQgHubdAF4pOx6gF1YLZbD2fSfjeN9c572ZBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4tJqP6/nzF+kzH76d/m6+Tn/8Ku2yCwBwcI4+rn2zrJ/y0w/D8gdzAOCxmvz5U/ppAICDdItQAAAOlVAAAEpCAQAoCQUAoPTbroe8TpP/bo77LmnOAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGJNGIfz5y/SNy+zrSZneXr6OgCwB0dhHPpmmbv4NS6EAgB7MQkPXD8NAOyJUAAASkIBACgJBQCgJBQAgJJQAABKQgEAKAkFAKAkFACAklAAAEpCAQAoCQUAoOSmUONxMXzNs72zwH2sFrNs5bhLu+wCHAS3mR6Trd+wB+3pOnAX16+3Ju+GR7Nsq2/atCdvAzx6/qIwJj70+WvNc5dIuNb0T4dVKMABcI0CAFASCgBASSgAACWhAACUhAIAUBIKAEBJKAAAJaEAAJSEAgBQEgoAQEkoAAAloQAAlIQCHKyr65s6rbO1vkv//tsAAAAAAAAAAAAAAAAAAAAAADwgTcZitZgP6yy7dZH2dB0A4E7GEQqrxRfDT/Imu7dOf/x52mUXAGBrY/kXzrPsxyx///mzAAB34l4PAEBJKAAAJaEAAJSEAgBQEgoAQEkoAAAloQAAlIQCAFASCgBASSgAACWhAACUhAIAUBIKAEBJKAAAJaEAAJSEAgBQEgoAQEkoAAAloQAAlMYSChfZj3X+/92PAQDupMlYrF5Ok6tpdqk9XQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGDsmgCwf28X74Z1vjloLtP/439pl11ghCYBYL9Wi3lujIRr/ZPk6klgpIQCAFASCgBASSgAACWhAACUjgLczurlNLmaZmeOO1e6H4rJ8Hv+EHiIbI+E21gtvhjOljfZtb55lfZkGR6/69dQMrthsk57ehYYKaEAt1Hugb+3dZ6d/jsAI+UaBQCgJBQAgJJQAABKQgEAKAkFAKAkFACAklAAAEpCAQAoCQUAoCQUAICSUAAASkIBACgJBQCgJBQAgJJQAABKQgEAKAkFAKAkFACAklAAAEpCAW6jzw/Zj3UARuwowC1cfZ3++HJ4MMvOfOiSf54FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD7VBAA4bKvFbPPgcZd22QkFADhk519+k75/uTlouuF4OwkAcLhujISPg+mwzIUCAFASCgBASSgAACWhAACUhAIAHLT+8g+G66MAAIerb9phnW8Omi7tydtfAOHjtX+lreDqAAAAAElFTkSuQmCC" alt="backgraund" class="faq-bg" />
 
-function sum(a, b) {
-      return a + b;
-    }
-                                                    
-4. Також у JS залишаємо хоча б мінімальні коментарі
-5. Класи section, container, задають мінімальний базовий скелет сторінки
-якщо захочеться до них щось додати подумай три рази
-6. Щоб глянути яку назву яка іконка має у спрайті залишу скрін у папці img (sprite.jpg) -->
+    <div class="acc-container">
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What programming languages ​​are most often used in your
+            project?<span class="icon">
+               <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </div>
 
-<section class="section">
-  <div class="container">
-    <!--TODO -->
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What are the deadlines for the project?<span class="icon">
+              <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What payment methods do you accept?<span class="icon">
+              <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </div>
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            How can I contact you?<span class="icon">
+              <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and programming languages. Typically, this includes a combination of frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </div>
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Do you provide advice or support?<span class="icon">
+              <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            The terms of project implementation depend to a large extent on a number of factors, such as the scope of the project, its complexity, and the availability of resources. Determining exact deadlines is a difficult task, and it usually occurs during the planning phase of the project.
+          </p>
+        </div>
+      </div>
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What does the process of developing a software product look like from idea to implementation?<span class="icon">
+              <svg class="svg-faq" width="32" height="32" >
+                <use class="svg-faq-icon" href="/gitpub-team-project/assets/sprite-oahpSgbj.svg#icon-dropdown"></use>
+              </svg>
+            </span>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard, specialized electronic payment systems such as PayPal, as well as payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
