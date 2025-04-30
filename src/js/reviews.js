@@ -30,7 +30,10 @@ function renderReviews(reviews) {
     .map(
       ({ review, author, avatar_url }) => `
       <li class="swiper-slide">
-        <div class="review-card">
+        <div class="review-card"
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="600">
           <p class="review-text">${review}</p>
           <div class="review-author">
             <img src="${avatar_url}" alt="${author}" class="review-author-avatar" />
