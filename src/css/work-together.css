@@ -235,6 +235,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  @media screen and (width < 768px) {
+    display: none;
+  }
 }
 /* ------------------Modal---------------------- */
 .work-together-modal.is-open {
