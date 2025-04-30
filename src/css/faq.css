@@ -1,7 +1,12 @@
-
 .ac:has(+ .is-active) {
   border-bottom: none;
 }
+.ac.is-active {
+  .ac-trigger {
+    padding: 0 0 24px;
+  }
+}
+
 .ac.is-active {
   border-radius: 16px;
   border: none;
@@ -9,7 +14,7 @@
 
 .svg-faq {
   fill: transparent;
-  stroke: light-dark(var(--black), var(--white));;
+  stroke: light-dark(var(--black), var(--white));
 }
 
 .faq-container {
@@ -36,20 +41,20 @@
 
 @media screen and (min-width: 1280px) {
   .faq-container {
-      flex-direction: row;
-      gap: 104px;
-      flex-wrap: nowrap;
-      max-width: 1280px;
-      margin-top: 164px;
-      position: relative;
-    }
+    flex-direction: row;
+    gap: 104px;
+    flex-wrap: nowrap;
+    max-width: 1280px;
+    margin-top: 164px;
+    position: relative;
+  }
 }
 
 .faq-header {
   max-width: 320px;
   height: auto;
 
-  font-family: "Impact", sans-serif;
+  font-family: 'Impact', sans-serif;
   color: light-dark(var(--black), var(--white));
   font-weight: 400;
   font-size: 52px;
@@ -63,7 +68,6 @@
   flex-direction: column;
   gap: 0px;
 
-  
   height: auto;
 }
 
@@ -81,7 +85,6 @@
   }
 
   .acc-container {
-    
     gap: 10px;
   }
 }
@@ -89,7 +92,6 @@
 @media screen and (min-width: 1280px) {
   .faq-header {
     max-width: 520px;
-
   }
 
   .faq-bg {
@@ -105,7 +107,6 @@
     margin-top: 276px;
     gap: 0px;
     max-width: 592px;
-    
   }
 }
 
@@ -113,50 +114,44 @@
 .ac {
   margin: 0px;
   border: none;
-   
+
   background-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
-  
-border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
+
+  border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
   height: auto;
   padding: 28px 24px;
-
 }
 
 .ac.is-active {
-  background-color: light-dark(var(--light-accent), var(--dark-accet-dt));;
-
+  background-color: light-dark(var(--light-accent), var(--dark-accet-dt));
 }
-
 
 .ac .ac-header {
   font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--black);
-    margin: 0px;
-  
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin: 0px;
 }
 
 @media screen and (min-width: 768px) {
   .ac .ac-header {
     font-size: 20px;
     line-height: 1.6;
-
   }
 }
 
-
-
 .ac .ac-trigger {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
@@ -166,8 +161,6 @@ border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
   color: light-dark(var(--black), var(--white));
   text-align: left;
 
-  padding: 0 26px 24px 0;
-
   cursor: pointer;
   background-color: transparent;
   transition: color 0.25s ease;
@@ -175,21 +168,24 @@ border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
   text-decoration: none;
   margin: 0;
   border: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-
-.ac-trigger .icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+.ac-trigger .svg-faq {
   transition: transform 0.3s ease;
-  width: 15px;
-  height: 15px;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  width: 32px;
+  height: 32px;
+  /* @media screen and (width >= 768px) {
+    top: 7%;
+  } */
 }
 
-.ac.is-active .ac-trigger .icon {
-  transform: translateX(100%) rotate(180deg);
+.ac.is-active .ac-trigger .svg-faq {
+  transform: rotate(180deg);
 }
 
 .ac .ac-trigger:focus {
@@ -203,7 +199,7 @@ border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
 }
 
 .ac .ac-panel .ac-text {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -218,4 +214,13 @@ border-bottom: 1px solid light-dark(var(--light-grey), var(--white));
 
 .ac.is-active .ac-panel {
   visibility: visible;
+}
+.sub--text {
+  max-width: 250px;
+  @media screen and (width >= 768px) {
+    max-width: 600px;
+  }
+  @media screen and (width >= 1280px) {
+    max-width: 488px;
+  }
 }
