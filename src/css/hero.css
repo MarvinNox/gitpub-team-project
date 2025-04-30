@@ -7,6 +7,7 @@
   position: relative;
   background-color: light-dark(var(--white), var(--black-dt));
   z-index: 1;
+  min-height: 100vh;
 }
 
 .hero > .container {
