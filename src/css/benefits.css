@@ -28,6 +28,9 @@ body {
   text-transform: uppercase;
   color: var(--black);
   max-width: 320px;
+  @media screen and (width < 320px) {
+    font-size: 48px;
+  }
 }
 
 .benefits-title-el {

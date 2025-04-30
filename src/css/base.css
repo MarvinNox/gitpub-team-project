@@ -23,6 +23,11 @@
   --third-family: 'Montserrat', sans-serif;
 }
 
+#faq,
+#benefits {
+  display: none;
+}
+
 body {
   color-scheme: light;
   background-color: light-dark(var(--white), var(--black-dt));
