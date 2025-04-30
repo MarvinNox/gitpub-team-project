@@ -12,7 +12,7 @@
 
     <div class="about-image-text">
       <img
-        src="img/about-me/about-me.png"
+        srcset="img/about-me/about-me.png 1x, img/about-me/about-me@2x.png 2x"
         alt="man"
         class="about-photo"
         data-aos="fade-right"
@@ -22,7 +22,20 @@
       />
       <div class="about-text">
         <div class="about-decor">
-          <img src="img/about-me/decor-bg-2.png" alt="Decor background" />
+          <picture>
+            <source
+              srcset="
+                /img/about-me/decor-bg-2.png            1x,
+                /img/about-me/decor-bg-2-desktop@2x.png 2x
+              "
+              media="(min-width: 1280px)" />
+            <img
+              srcset="
+                /img/about-me/decor-bg-2-tablet.png    1x,
+                /img/about-me/decor-bg-2-tablet@2x.png 2x
+              "
+              alt="Decor background"
+          /></picture>
         </div>
         <h3 class="about-subtitle">BIO</h3>
         <p
