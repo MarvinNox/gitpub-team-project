@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/gitpub-team-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/gitpub-team-project/assets/vendor-Cp5DvIfW.js">
     <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/vendor-B6QWi432.css">
-    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-CxT58b4i.css">
+    <link rel="stylesheet" crossorigin href="/gitpub-team-project/assets/index-fW_n8R15.css">
   </head>
   <body>
     <header class="header">
@@ -52,11 +52,13 @@
       <section class="hero section" id="hero">
   <div class="container">
     <picture>
-      <source srcset="/gitpub-team-project/assets/decor_bg-desk-B4qOblZu.png" media="(min-width: 1280px)" />
       <source
-        srcset="/gitpub-team-project/assets/decor_bg-tablet-CmwZ9M0i.png"
+        srcset="img/hero/decor_bg-desk.webp"
+        media="(min-width: 1280px)" />
+      <source
+        srcset="img/hero/decor_bg-tablet.webp"
         media="(min-width: 768px)" />
-      <img src="/gitpub-team-project/assets/decog_bg-kjNDP7KY.png" alt="back drop" class="hero--bg"
+      <img src="img/hero/decog_bg.webp" alt="back drop" class="hero--bg"
     /></picture>
     <div class="hero--wrapper">
       <h1
@@ -148,7 +150,7 @@
 
     <div class="about-image-text">
       <img
-        src="/gitpub-team-project/assets/about-me-B8-MLw6v.png"
+        srcset="/gitpub-team-project/assets/about-me-B8-MLw6v.png 1x, img/about-me/about-me@2x.png 2x"
         alt="man"
         class="about-photo"
         data-aos="fade-right"
@@ -158,7 +160,14 @@
       />
       <div class="about-text">
         <div class="about-decor">
-          <img src="/gitpub-team-project/assets/decor-bg-2-BkEFPb3r.png" alt="Decor background" />
+          <picture>
+            <source
+              srcset="/gitpub-team-project/assets/decor-bg-2-BkEFPb3r.png 1x, /img/about-me/decor-bg-2-desktop@2x.png 2x"
+              media="(min-width: 1280px)" />
+            <img
+              srcset="/gitpub-team-project/assets/decor-bg-2-tablet-CwZO8mvz.png 1x, /img/about-me/decor-bg-2-tablet@2x.png 2x"
+              alt="Decor background"
+          /></picture>
         </div>
         <h3 class="about-subtitle">BIO</h3>
         <p
@@ -421,7 +430,11 @@
       frequently asked <span class="faq-header-question">question</span>
     </h2>
 
-    <img src="/gitpub-team-project/assets/faq_bg-DCFMmspB.png" alt="backgraund" class="faq-bg" />
+    <img
+      srcset="/gitpub-team-project/assets/faq_bg-DCFMmspB.png 1x, /img/faq/faq_bg@2x.png 2x"
+      alt="backgraund"
+      class="faq-bg"
+    />
 
     <div
       class="acc-container"
