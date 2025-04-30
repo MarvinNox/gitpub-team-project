@@ -44,7 +44,7 @@ body {
 
 .benefits-item {
   margin-top: 32px;
-  width: 320px;
+  max-width: 320px;
 }
 
 .benefits-item-title {

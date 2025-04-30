@@ -58,6 +58,9 @@
   color: light-dark(var(--black), var(--white));
   font-weight: 400;
   font-size: 52px;
+  @media screen and (width < 360px) {
+    font-size: 48px;
+  }
   line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
