@@ -54,3 +54,5 @@ elements.
 
 This project was created for educational purposes and can be used freely for
 learning and teaching.
+
+![Team logo](./assets/GitPub_logo.png)
