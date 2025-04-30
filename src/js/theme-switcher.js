@@ -13,7 +13,8 @@ export function setTheme(check) {
 
 export function detectTheme() {
     const savedTheme = getTheme();
-    if (savedTheme) {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (savedTheme || prefersDark) {
         refs.themeToggler.checked = true;
         document.querySelector('body').classList.add('dark');
     }
@@ -27,6 +28,3 @@ export function toggleSwitcher(evt) {
         document.body.classList.remove('dark');
     }
 }
-//! to main
-// detectTheme();
-// refs.themeToggler.addEventListener('change', toggleSwitcher);

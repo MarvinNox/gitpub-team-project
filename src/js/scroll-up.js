@@ -27,7 +27,3 @@ export function scrollUp() {
 };
 
 export const scrollUpBtnShow = debounce(scrollUpBtn, 300);
-
-//!To main
-// window.addEventListener('scroll', scrollUpBtnShow);
-// refsScroll.scrollBtn.addEventListener('click', scrollUp);
