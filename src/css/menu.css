@@ -5,7 +5,11 @@
   width: 100%;
   height: 100vh;
   background-color: var(--white);
-  background-image: url('../img/hero/decog_bg.png');
+  background-image: url('/img/menu/decor_bg_8.png');
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/img/menu/decor_bg_8@2x.png');
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

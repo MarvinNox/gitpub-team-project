@@ -237,7 +237,7 @@
 
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: light-dark(var(--accet-green), var(--white-dt));
+  color: light-dark(var(--black), var(--white-dt));
 
   transition: all 300ms ease-in-out;
 

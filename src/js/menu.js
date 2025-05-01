@@ -35,7 +35,7 @@ function initSwipeMenu(menu) {
   let touchEndX = null;
   let touchStartY = null;
   let touchEndY = null;
-  const swipeThreshold = 60;
+  const swipeThreshold = 80;
   const maxVerticalMove = 30;
 
   document.addEventListener('touchstart', (e) => {
