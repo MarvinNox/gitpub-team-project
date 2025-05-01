@@ -40,11 +40,12 @@ body {
 
 .benefits-list {
   margin-top: 40px;
+  display: block;
 }
 
 .benefits-item {
   margin-top: 32px;
-  width: 320px;
+  width: 100%;
 }
 
 .benefits-item-title {
