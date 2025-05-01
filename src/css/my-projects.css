@@ -110,10 +110,12 @@ body {
 
 /* Контейнер текста и кнопки */
 .div-my-project {
+  display: flex;
+  flex-direction: column;
   transition: width 1s ease, height 1s ease;
   @media screen and (width >= 768px) {
     gap: 32px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -160,10 +162,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  align-self: flex-end;
   gap: 12px;
   padding: 12px 24px;
-  margin-left: 60%;
   margin-top: 16px;
   @media screen and (width >= 768px) {
     margin-top: 0;
