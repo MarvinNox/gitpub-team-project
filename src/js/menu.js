@@ -40,12 +40,14 @@ function initSwipeMenu(menu) {
 
   document.addEventListener('touchstart', (e) => {
     if (menu.classList.contains('open')) return;
+    if (e.target.closest('.reviews')) return;
     touchStartX = e.changedTouches[0].screenX;
     touchStartY = e.changedTouches[0].screenY;
   }, false);
 
   document.addEventListener('touchend', (e) => {
     if (menu.classList.contains('open')) return;
+    if (e.target.closest('.reviews')) return;
     touchEndX = e.changedTouches[0].screenX;
     touchEndY = e.changedTouches[0].screenY;
 
